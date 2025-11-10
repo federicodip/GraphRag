@@ -18,22 +18,65 @@ from pathlib import Path
 # matches: u2643, u00b0, u1f45, u03b1, etc. (4–6 hex digits)
 UHEX = re.compile(r"u([0-9a-fA-F]{4,6})")
 
+
 def decode_bare_u_sequences(s: str) -> str:
-    """Replace 'uXXXX' / 'uXXXXXX' with the corresponding Unicode character."""
-    return UHEX.sub(lambda m: chr(int(m.group(1), 16)), s)
+    r"""
+    Robustly decode literal \uXXXX sequences in plain text.
+    - First collapse UTF-16 surrogate pairs to a single codepoint.
+    - Then decode single \uXXXX (exactly 4 hex digits).
+    - Anything invalid/out-of-range is left untouched.
+    """
+    # 1) Surrogate pairs: \uD800–\uDBFF followed by \uDC00–\uDFFF
+    def _pair_repl(m):
+        hi = int(m.group(1), 16)
+        lo = int(m.group(2), 16)
+        cp = 0x10000 + ((hi - 0xD800) << 10) + (lo - 0xDC00)
+        try:
+            return chr(cp)
+        except ValueError:
+            return m.group(0)
+
+    s = re.sub(
+        r'\\u(d[89ab][0-9a-f]{2})\\u(d[cdef][0-9a-f]{2})',
+        lambda m: _pair_repl(m),
+        s,
+        flags=re.IGNORECASE
+    )
+
+    # 2) Single \uXXXX (exactly 4 hex digits)
+    def _single_repl(m):
+        cp = int(m.group(1), 16)
+        # skip lone surrogates; they were handled above as pairs
+        if 0xD800 <= cp <= 0xDFFF or cp > 0x10FFFF:
+            return m.group(0)
+        try:
+            return chr(cp)
+        except ValueError:
+            return m.group(0)
+
+    s = re.sub(
+        r'\\u([0-9a-f]{4})',
+        lambda m: _single_repl(m),
+        s,
+        flags=re.IGNORECASE
+    )
+
+    return s
+
 
 def normalize_text(s: str) -> str:
     """Unicode NFC + replace NBSP with regular space."""
     s = s.replace("\u00A0", " ")
     return unicodedata.normalize("NFC", s)
 
+
 def clean_text(s: str) -> str:
     """Decode bare-u sequences then normalize."""
     return normalize_text(decode_bare_u_sequences(s))
 
+
 def load_chunks(input_path: Path) -> list[str]:
     """Read a JSON array of strings from file."""
-    # 'utf-8-sig' strips a BOM if present (common on Windows)
     raw = input_path.read_text(encoding="utf-8-sig")
     try:
         data = json.loads(raw)
@@ -48,6 +91,7 @@ def load_chunks(input_path: Path) -> list[str]:
         raise SystemExit("Input must be a JSON array of strings.")
     return data
 
+
 def write_jsonl(chunks: list[str], output_path: Path, article_id: str):
     """Write JSONL with cleaned text (no raw text kept)."""
     with output_path.open("w", encoding="utf-8") as f:
@@ -60,6 +104,7 @@ def write_jsonl(chunks: list[str], output_path: Path, article_id: str):
                 "text": text_clean,
             }
             f.write(json.dumps(obj, ensure_ascii=False) + "\n")
+
 
 def main():
     parser = argparse.ArgumentParser()
@@ -74,15 +119,13 @@ def main():
     chunks = load_chunks(input_path)
     write_jsonl(chunks, output_path, args.article_id)
 
-    # quick sanity check for residual 'uXXXX' sequences in cleaned text
-    residual = 0
-    for s in chunks:
-        if UHEX.search(clean_text(s)):
-            residual += 1
+    # quick sanity check for residual 'uXXXX' patterns in cleaned text
+    residual = sum(1 for s in chunks if UHEX.search(clean_text(s)))
     if residual:
         print(f"WARNING: {residual} chunks still contain 'uXXXX' patterns after cleaning.", file=sys.stderr)
 
     print(f"Wrote {len(chunks)} lines to {output_path}")
+
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,1783 @@
+﻿=== Directory Structure Overview ===
+.\data
+.\data\articles
+.\data\chunks
+.\.env
+.\.env.example
+.\.gitignore
+.\audit_clean.txt
+.\data\articles\isaw-papers-1-2011.meta.json
+.\data\articles\isaw-papers-2-2012.meta.json
+.\data\chunks\isaw.jsonl
+.\data\chunks\isaw2.jsonl
+.\data\chunks\isaw2.txt
+.\export_audit.ps1
+.\ingest_one_article.py
+.\ingest_pleiades.py
+.\README.md
+.\to_jsonl_fix_unicode.py
+
+=== File Contents (filtered, readable) ===
+
+----- BEGIN .\audit_clean.txt -----
+     1  === Directory Structure Overview ===
+     2  .\data
+     3  .\data\articles
+     4  .\data\chunks
+     5  .\.env
+     6  .\.env.example
+     7  .\.gitignore
+     8  .\audit_clean.txt
+     9  .\data\articles\isaw-papers-1-2011.meta.json
+    10  .\data\articles\isaw-papers-2-2012.meta.json
+    11  .\data\chunks\isaw.jsonl
+    12  .\data\chunks\isaw2.jsonl
+    13  .\data\chunks\isaw2.txt
+    14  .\export_audit.ps1
+    15  .\ingest_one_article.py
+    16  .\ingest_pleiades.py
+    17  .\README.md
+    18  .\to_jsonl_fix_unicode.py
+    19  
+    20  === File Contents (filtered, readable) ===
+    21  
+    22  ----- BEGIN .\audit_clean.txt -----
+    23  
+----- END .\audit_clean.txt -----
+
+----- BEGIN .\data\articles\isaw-papers-1-2011.meta.json -----
+     1  {
+     2    "articleId": "isaw-papers-1-2011",
+     3    "title": "A New Discovery of a Component of Greek Astrology in Babylonian Tablets: The Terms",
+     4    "year": 2011,
+     5    "journal": "ISAW Papers",
+     6    "url": "https://dlib.nyu.edu/awdl/isaw/isaw-papers/1/",
+     7    "authors": [
+     8      {"name": "Alexander Jones", "order": 1, "role": "author", "corresponding": false},
+     9      {"name": "John M. Steele",     "order": 2, "role": "author", "corresponding": false}
+    10    ]
+    11  }
+    12  
+----- END .\data\articles\isaw-papers-1-2011.meta.json -----
+
+----- BEGIN .\data\articles\isaw-papers-2-2012.meta.json -----
+     1  {
+     2    "articleId": "isaw-papers-2-2012",
+     3    "title": "Review of Ptolemaic Numismatics, 1996 to 2007",
+     4    "year": 2012,
+     5    "journal": "ISAW Papers",
+     6    "url": "https://dlib.nyu.edu/awdl/isaw/isaw-papers/2/",
+     7    "authors": [
+     8      {"name": "Catharine Lorber", "order": 1, "role": "author", "corresponding": false},
+     9      {"name": "Andrew Meadows",  "order": 2, "role": "author", "corresponding": false}
+    10    ]
+    11  }
+    12  
+----- END .\data\articles\isaw-papers-2-2012.meta.json -----
+
+----- BEGIN .\data\chunks\isaw2.txt -----
+     1  [    "u00a92010 the authors; distributed under the terms of the Creative Commons Attribution LicenseThis article can be downloaded as a single fileISAW Papers 2
+     1  (2012)Review of Ptolemaic Numismatics, 1996 to 2007Catharine Lorber and Andrew Meadowshttp://doi.org/2333.1/9s4mw84wAbstract: The authors review scholarship on
+     1  Ptolemaic numismatics published between 1996 and 2007.They present the major conclusions of articles discussing the distribution, role in the economy,
+     1  iconography, weights standards and other aspects of this important Hellenistic coinage. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic
+     1  Numismatics, 1996-2007. ISAW Papers 2.",
+     2      "Keywords/Subjects: Greek Numismatics, Economic history--To 500, Ptolemaic Empire, Ptolemy I, Ptolemy II, Ptolemy III, Ptolemy IV, Ptolemy V, Ptolemy VI,
+     2  Ptolemy VIII, Ptolemy IX, Ptolemy X, Ptolemy XII, Arsinoe II, Berenice I, Berenice II, Cleopatra I, Cleopatra II, Cleopatra III, Cleopatra VII, Seleucid
+     2  Empire.Table of ContentsIntroductionGeneral WorksCatalogues, Collections and ExhibitionsHoardsExcavation, finds and circulationCoinage in the Ptolemaic
+     2  economyGold and silver coinageBronze coinageTechnical MattersPortraiture, iconography and self-representationAcknowledgementsTitles CitedIntroductionThe
+     2  following summaries of research in the field of Ptolemaic numismatics are based on chapters originally published in the International Numismatic Commission's
+     2  Survey of Numismatic Research, which appears in conjunction with the conferences held by that organization every six years. Source: C. Lorber and A. Meadows.
+     2  (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+     3      "That by Meadows, covering the years 1996-2001, appeared in the volume produced to coincide with the Madrid International Congress of 2003 [1]; that by
+     3  Lorber, covering the years 2002-2007, was written for the Glasgow meeting of 2009 [2].Both contributions have been augmented either with items missed in the
+     3  original publication (Meadows) or with items that had to be cut from the printed version for reasons of space (Lorber). A certain amount of rearrangement of
+     3  material has also taken place in order to harmonize the treatment of topics under a single series of headings. Source: C. Lorber and A. Meadows. (2012) Review
+     3  of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+     4      "The result is reflected in the Table of Contents.#p0General Works1996-2001Two general surveys of Ptolemaic coinage have appeared from the pen of LE RIDER
+     4  [88], [72].The former together with other articles on Ptolemaic coinage by the same author have also been reprinted in volume 3 of a collection of his essays
+     4  [15].Various important insights provided by these works are incorporated in discussions below.#p1Several general surveys of Ptolemaic history have drawn on
+     4  numismatic evidence. CHAUVEAU [7] illustrates a number of coins and includes a discussion of the cash economy and inflation in Ptolemaic Egypt. MEADOWS [103] in
+     4  both an introductory essay and catalogue entries has sought to situate Ptolemaic coinage and related issues within their political setting. Source: C. Lorber
+     4  and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+     5      "The history of the Ptolemaic empire by Hu00d6LBL [11] has now appeared in an English edition; while providing much useful background discussion, its
+     5  treatment of monetary and economic history is sadly all but non-existent.An opportunity was also missed for the incorporation of numismatic evidence in
+     5  BRINGMANN and VON STEUBENs collection of evidence for royal benefactions [6], although this omission has now been partially corrected (at least for the
+     5  Ptolemies) by NOEKSE [18], who discusses various numismatic testimonia for benefactions on the parts of Ptolemies I to VI and VIII. Source: C. Lorber and A.
+     5  Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+     6      "Equally political in focus is LAMPELAs study of Romes relations with the Ptolemies [15].However, she begins with a discussion of the supposed numismatic
+     6  evidence for collusion between Philadelphus and Rome, in the form of similar control marks on Roma/Victory didrachms and the coinage in the name of Arsinoe
+     6  II.Like some other recent commentators on this matter (cf. MATTINGLY [99], HOLSTEIN [84]), she raises the question of Ptolemaic influence on Roman mint
+     6  practice, coming down in favour of their having been a connection.#p22002-2007The recent revival of interest in the Hellenistic world has inspired the
+     6  publication of numerous histories, handbooks, and collections of sources in translation. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic
+     6  Numismatics, 1996-2007. ISAW Papers 2.",
+     7      "Typically the broader works offer only brief summaries of Ptolemaic economic and/or monetary policy aimed at orienting the student or the non-specialist
+     7  (DAVESNE AND MIROUX [9], DAVIES [10], REGER [21], WILSON [22].More substantial is PICARD [20], a chapter on coinage and fiscality that compares the roles of
+     7  grain and coinage in early Ptolemaic fiscal policy, traces the development of the coinage, and relates the introduction of large bronze denominations to the
+     7  Revenue Laws of Ptolemy II. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+     8      "This reformed bronze coinage, according to Picard, involved six denominations of which the largest was an octobol, not a drachm, and face values for other
+     8  denominations are suggested in captions to the illustrations.Major documents pertaining to Ptolemaic monetary and tax policy are available in the revised
+     8  editions of AUSTIN [3] and of BAGNALL AND DEROW [4]; the latter work includes only epigraphic and papyrological sources and is strongly weighted toward the
+     8  Ptolemaic kingdom.#p3Ptolemaic coins figure in two new studies of Hellenistic colonization. COHEN [8] includes Ptolemaic coin finds in the documentation for
+     8  eight settlements and provides references for the Ptolemaic mints at Ptolemais-Akko, Seleucia-Gaza, and Ptolemais-Barce. MUELLER [17], treating Ptolemaic
+     8  colonization exclusively, mentions coins as the first attestations of Arsinoe-Rithymna on Crete, Ptolemais-Lebedus in Ionia, and Ptolemais-Larissa in the
+     8  Troad.#p4In his website on Ptolemaic genealogy BENNETT [5] cites numismatic sources for several dates and challenges both the numismatic and calendrical
+     8  components of HAZZARDs case for a coregency of Ptolemy V and VI (The use of the Macedonian calendar under Ptolemies V and VI, Travaux de numismatique grecque
+     8  offerts u00e0 Georges Le Rider, eds. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+     9      "Amandy, , and Hurter, (London, 1999), pp. 147u2013159). HUu00dfs magisterial history of Ptolemaic Egypt [12] mentions coinage in some half dozen passages,
+     9  the most interesting being an account of exchange between the Egyptian, Phoenician, and Attic currencies under Dynasty XXVII; an extended discussion of the
+     9  numismatic policies and iconography of Ptolemy V mostly follows Kyrieleis.#p5The use of Ptolemaic coins to illustrate non-numismatic works can be marred by
+     9  inaccurate descriptions. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    10      "KURTH [14] illustrates a tetradrachm of each king involved in the construction of the temple of Horus at Edfu, implying that the issues of Ptolemies VI
+    10  through X bear their portraits, whereas they are in fact standard tetradrachms with the image of Ptolemy JONES [13] makes a similar error with a tetradrachm of
+    10  Ptolemy XII and eschews a Ptolemaic coin portrait of Cleopatra VII in favor of a Roman denarius of Antony and Cleopatra.#p6Catalogues, Collections, and
+    10  Exhibitions1996-2001Volumes of collections devoted solely to Ptolemaic or Egyptian coinage have been published by GUIDO [31] and [32]: Brescia), NOESKE [41]:
+    10  Frankfurt am Main), PITCHFORK [43]: Sydney) and Ru00c9MY [45]: Grenoble). A number of other collections have also now had their Ptolemaic holdings published as
+    10  parts of larger catalogues by DE CALLATAu0178 and VAN HEESCH, [27]: Brussels, du Chastel), HOLLOWAY [34]: Brown University), IRELAND [35]: Amasya, Turkey),
+    10  LESCHHORN [38]: Braunschweig), MIELCZAREK [40]: Lodz), ZWICKER [53]: Erlangen-Nu00fcrnberg). A new acquisition at Kassel is published by Lu00d6HR [39], and a
+    10  coin in Sibiu by DUDAU [28]. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    11      "KAMEL [36] has published photographs of some highlights of the Graeco-Roman Museum in Alexandria, including some Ptolemaic pieces and what purport to be
+    11  dies for K gold issues in the name of Arsinoe II.The recent acquisition of a group of Hellenistic jewellery by the Getty Museum, Malibu, has prompted the
+    11  publication of a volume on the subject of Ptolemaic gold (including some coins) by PFROMMER [42]. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic
+    11  Numismatics, 1996-2007. ISAW Papers 2.",
+    12      "Exhibition publications containing Ptolemaic coinage have included the permanent display of the gold coins from the Gulbenkian collection edited by
+    12  HIPu00d3LITO [33], and two major temporary exhibitions on broader Ptolemaic themes.One originated in Paris (RAUSCH [44]), the other in London (WALKER, HIGGS,
+    12  [50], [51]).The latter contains brief surveys of Ptolemaic coinage as well as detailed commentary on coins struck by, and with the portrait of Cleopatra VII
+    12  (MEADOWS [103]).#p72002-2007Selected Ptolemaic issues commonly found on Cyprus are featured in TZIAMBAZIS catalogue of Cypriot coins [49]. Source: C. Lorber and
+    12  A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    13      "Ptolemaic acquisitions by the Danish National Museum during the years 1942u20131996 are included in the supplement to SNG Copenhagen by SCHULZE and ZAHLE
+    13  [46].These coins reflect the research interests of Mu00f8rkholm, with an especially strong representation of issues connected with the Fifth Syrian War. A
+    13  single Ptolemaic bronze in the Schledehaus collection in Osnabru00fcck is the occasion for extended comments by CAVAGNA [26].#p8In 1999u20132000 the
+    13  Archaeological Museum of Heracleion, Crete, displayed an exhibit illustrating the contacts between Crete and Egypt over three millennia, including 36 Ptolemaic
+    13  coins found on the island and catalogued by STEFANAKIS [48]. GODDIOS spectacular discovery of another Heracleion, the submerged city of Heracleion-Thonis,
+    13  inspired a traveling exhibition that included a gold stater of Ptolemy I found in the ruins of Heracleion [30]. Source: C. Lorber and A. Meadows. (2012) Review
+    13  of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    14      "In 2006 the Harvard University Art Museums added a permanent exhibit of early Hellenistic coins, including four of Ptolemy I; in the catalogue
+    14  ARNOLD-BIUCCHI [23] favors Alexandria as the original location of Ptolemys mint and attributes to Cyrene a gold stater traditionally assigned to Barce, reading
+    14  the symbol in the exergue as a silphium plant rather than an apple branch.In 2007 SHEEDY [47] mounted and catalogued an exhibition of Hellenistic coins in
+    14  Sydney, including fourteen Ptolemaic coins, predominantly issues of Ptolemy I, as satrap and as king.#p9Hoards1996-2001Hoards containing Ptolemaic coinage have
+    14  been reported from the following locations. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    15      "Torraca and Pompeii in Italy: MASTELLONI [183]: 5 AE, Ptol. II); CASTELLONI, OLIVIERO [172]: 1 AE, Ptol. II).Bosanska Krupa and an unknown findspot in
+    15  Yugoslavia: MIRNIK [184]: 8 AE, Ptols. IVu2013VIII), UJES, BAKu00cdC [191]: 9 AE, Ptols. IIIu2013VI).Thrace: ARSLAN, LIGHTFOOT [168]: 11 tetradrachms of Ptols.
+    15  I and II, closing late 260s).Attica and Geraki in Greece: LAGOS [182]: 1 AE, Ptol. II, see below) and VAN DER VIN [192]: 1 AE, Sv. 1000). Source: C. Lorber and
+    15  A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    16      "Vasilika Anogeia on Crete: STEFANAKIS [190]. Su00f6u011fu00fctlu00fcdere, near Fethiye in Asia Minor: ASHTON, ARSLAN, DERVIu015eAu011eAOu011eLU [170]: 18
+    16  Ptolemaic tetradrachms closing c. 256 BC, perhaps in the context of the Second Syrian War; cf. DAVESNE [78]).Eurychon in Cyprus: DESTROOPER-GEORGIADES [174]: 17
+    16  AE to Cleopatra VII).Palestine and elsewhere in the Levant: KUSHNIR STEIN, GITLER [181]: 1 AE, Ptol. II); DAVESNE, LEMAIRE [173]: 252+ AE, Ptols. Iu2013II).
+    16  Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    17      "Elephantine (679 AE, Ptols. IIu2013IV), Xois (123 AE, Ptols. IIu2013IV) and an uncertain location (49 AE, Ptols. IIu2013IV) in Egypt: NOESKE [185]; JENKINS
+    17  [179] publishes a group of 13 bronze coins and four others, all said to have been found in the Cemetery of the Sacred Rams on Elephantine Island, Aswan.All of
+    17  the hoard coins and two of the strays were as Sv. 1424, probably to be attributed to Ptolemy V (see below), not the joint reign of Ptolemies VI and VIII.
+    17  KOVALENKO [180] publishes a hoard now in Moscow, of unknown findspot, containing 32 tetradrachms of Cleopatra VII, years 9u201320.#p102002-2007Our period saw
+    17  only a few hoard studies, several of which are discussed below in the context of Ptolemaic bronze coinage.#p11DUYRAT [175] reexamines the great Demanhour hoard
+    17  (IGCH 1664) as a source of information about coin circulation in early Hellenistic Egypt.#p12AUGu00c9 [171] reports the 1993 find of Ptolemaic tetradrachms at
+    17  Iraq al-Amir in Jordan, reportedly involving more than a thousand coins, most of which were dispersed on the numismatic market (see CH IX, 497; Paul Keen will
+    17  publish a reconstruction). Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    18      "For the 315 specimens acquired by the Archaeological Museum of Amman, Augu00e9 provides a tabular summary by mint and date according to the classification
+    18  of Davesne in Gu00fclnar II.He concludes that the hoard was formed in Palestine or Transjordan and secreted in or shortly after 243/2, probably in connection
+    18  with the Seleucid counterattack or with the action of Joseph the Tobiad.#p13PINCOCK [188] attempts to refute the analysis of CH VIII, 317 by Huston and Lorber
+    18  in NC 2001 and to defend the traditional attribution of Svoronos 1424 to the joint reign of Ptolemies VI and VIII. Source: C. Lorber and A. Meadows. (2012)
+    18  Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    19      "The author notes that he has been unable to publish his critique in peer-reviewed journals.#p14VON REDEN [121] provides useful appendices of all hoards
+    19  containing coins of Ptolemies Iu2013V, separated by metal and by geographic distribution.#p15Excavations, Finds and Circulation1996-2001From within Ptolemaic
+    19  dominions, AMANDRY [195] has published 232 Ptolemaic coins (150 identifiable, Ptolemies Iu2013XII) from the French excavations at Tanis in Egypt, MYu015aLIWIEC
+    19  [242] lists coins found at Athribis (2 AR, Ptols. Iu2013II, 4 AE, Ptols. II and IV), PICARD [246] publishes some of the the recent finds from Alexandria, while
+    19  BUTTREY publishes over 500 Ptolemaic period coins of the Cyrenaic mints from the excavation of the sanctuary of Demeter and Persephone at Cyrene (BUTTREY,
+    19  MCPHEE [215]. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    20      "Interestingly, only one Ptolemaic find from this site is from the mint of Alexandria.Buttrey also supplies a brief commentary on the Ptolemaic coinage of
+    20  this region. SHEEDY (SHEEDY, CARSON, WALMSLEY [250], published the 5 coins (Ptolemies Iu2013VI) found in the Australian excavations at Pella.Numerous sites in
+    20  Israel have furnished Ptolemaic material: Yodfat (AVIRAM, EDEN-BAJOWITZ [197]); Akko (AVSHALOM-GORNY [205]); Givat Yasaf (BERMAN, ARIEL [208]; Jerusalem (GITLER
+    20  [225]); Ramat Aviv (GORSALSANI [229]); Sasa (SMITLEIN [251]); Haifa-Qr Ha-Orvim (YEIVIN [259]); Beth Shean (TSAFRIR, FOERSTER [257]). Source: C. Lorber and A.
+    20  Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    21      "In addition coin finds from Ake (the Court House excavations), Dora, Kibbutz Ginosar on the shore of the Sea of Galilee and other sites in the region are
+    21  adduced by GITLER and KUSHNIR STEIN [82], and used to date certain issues of Ptolemies IX and X (see below). AUGu00c9 [196] has discussed (though not fully
+    21  published) the coin finds from Ras Ibn Hani, c. 5 km to the north of Latakia (Laodiceia) in Syria. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic
+    21  Numismatics, 1996-2007. ISAW Papers 2.",
+    22      "The discovery here of c. 170 Ptolemaic coins (Ptols. Iu2013III) is taken to provide evidence for the Ptolemaic occupation of the peninsula, perhaps in the
+    22  context of the Third Syrian War.Elsewhere in the overseas dependencies, Limyra in Lycia has yielded Ptolemaic finds (GORECKI [227], [228], as have survey work
+    22  in central Lycia (GREGORY [233] and Caria (KONUK [238], and excavation at Caunus (KELLNER, [235]. DESTROOPER-GEORGIADES [218] publishes an overstrike of
+    22  Demetrius Poliorcetes (Newell Pl. ii, 9u201310) on a bronze of Ptolemy I (Sv. 27) found in excavations at Dali on Cyprus. Source: C. Lorber and A. Meadows.
+    22  (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    23      "The same author also publishes the single Ptolemaic coin found in the French excavations at the Archegesion on Delos (DESTROOPER-GEORGIADES
+    23  [219].Stefanakis (62a???) has collected the evidence for finds of Ptolemaic coinage on Crete.Meanwhile, the phenomenon of Ptolemaic bronze circulating in the
+    23  west continues to be reported in finds from Tevere (FREY-KUPPER [220], Puglia (TRAVAGLINI [256] and Este (VISONA [258].#p162002-2007PARENTE [245] has published
+    23  the excavation coins from Bakchias in the Fayum. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    24      "These include an important proportion of Ptolemaic coins, dominated by the second-century double eagle type Svoronos 1424.Interestingly, bronzes were
+    24  replaced by tetradrachms under Ptolemy XII and Cleopatra VII. FREND [223] reports the coin finds from the 1974 campaign at Qazr Ibrahim; these include five
+    24  Ptolemaic bronzes, unfortunately misdescribed as coins of Roman Alexandria.Individual coin finds include a bronze of Ptolemy II discovered in excavations of the
+    24  bath of the Mammisi in Alexandria, reported by SZYMAu00d8SKA AND BRABAJ [254], and a bronze of Ptolemy VI uncovered in the Temple of Hatshepsut at Deir el-Bahri
+    24  by the Polish-Egyptian excavations in 1982, reported by MYu015aLIWIEC [241].#p17NOESKES [243] publication of the coin finds from the Upper Egyptian pilgrimage
+    24  center of Abu Mina entails a mammoth survey of comparable material. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW
+    24  Papers 2.",
+    25      "Although the topic is coinage of the fourth through eighth centuries , the survey captures a certain residue of Ptolemaic coinage, much of it previously
+    25  unpublished. (The individual finds at Abu Mina from the campaign seasons 1963, 1965u20131969 and 1975u20131983 include, somewhat surprisingly, a Berenice bronze
+    25  of Ras Ibn Hani (cf. LORBER [279], which overlooks this findspot) and two Cypriot bronzes, as well as two Egyptian bronzes dated year 3 and year 4 which are
+    25  erroneously ascribed to Cyprus. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    26      "Their Egyptian origin has now been demonstrated by FAUCHER and SHAHIN [176].Disappointingly, Ptolemaic coins are scarcely better represented in NOESKES
+    26  subsequent volume [244] cataloguing Greco-Roman coin finds from the Fayum.#p18BUTCHER [214] has published the pre-Islamic coin finds from sectors BEY 006 and
+    26  045 of the Beirut excavations conducted jointly by the American University of Beirut and the Archaeological Collaboration for Research and Excavations. Source:
+    26  C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    27      "These sites yielded 70 Ptolemaic bronzes, most of the Alexandria and Tyre mints.The presence of at least three (and perhaps as many as six) examples of
+    27  Svoronos 838 inspires their tentative reattribution from Sidon to Tyre.The bronze varieties assigned to Berytus by Svoronos were not represented in the
+    27  excavations, a fact consistent with their reattribution to southwest Asia Minor as proposed by ASHTON [261], [24]. Source: C. Lorber and A. Meadows. (2012)
+    27  Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    28      "The distribution of the Beirut excavation coins by reign is strongly weighted to Ptolemy II, but Svoronos 706u2013711 should probably be reattributed to
+    28  Ptolemy III (as acknowledged p. 46, n.1).In his commentary Butcher compares the bronze denominational systems for Alexandria and Tyre, with the suggestion that
+    28  they may have corresponded.He also discusses the stratigraphic evidence from BEY 006 indicating that Ptolemaic bronze coins were removed from circulation after
+    28  the Seleucid conquest of Phoenicia. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    29      "In a shorter overview of the coin assemblages from BEY 006 and 045 [213], BUTCHER also treats the Seleucid demonetization of Ptolemy currency but mentions
+    29  that third-century Ptolemaic bronzes sometimes occur in stratigraphic levels of the fifth and sixth centuries #p19SIDEBOTHAM [232] reports a Ptolemaic bronze
+    29  coin recovered from exploratory soundings in the civic center of Petra, conducted by the Hellenistic Petra Project in 2004. Source: C. Lorber and A. Meadows.
+    29  (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    30      "The coin was a worn u00c6 26 without central cavities, thus an issue of Ptolemy I or Ptolemy II before the currency reform of the 260s, countermarked with
+    30  an incuse trident.Sidebotham compares the countermark to the Seleucid anchor countermark of the second century and inexplicably cites the vertical die axis as
+    30  atypical of Alexandria.He consequently proposes a Phoenician mint (Tyre or Sidon) and submits that the worn state of the coin points to a century or more of
+    30  circulation before its deposit at Petra. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    31      "The goal of the Hellenistic Petra Project is to discover evidence of settlement at Petra before 100 , the date at which the Nabataeans are assumed to have
+    31  abandoned their nomadic lifestyle (following Diod. 19.94.10).The Ptolemaic coin is thus significant because it, together with two third-century Aradian bronzes
+    31  from the same trench, helps to define Hellenistic strata, as did Aradian and Ptolemaic coins found in the British excavations of 1955/6. Source: C. Lorber and
+    31  A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    32      "Sidebotham undertakes an overview of the association of Aradian and Ptolemaic coins with Nabataean sites along the caravan route, citing much information
+    32  provided by the Israel Antiquities Authority.He also draws attention to the association of Ptolemaic and Aradian coins at Ras Ibn Hani and hypothesizes
+    32  commercial exchanges between the Ptolemaic kingdom and Aradus after the end of the Third Syrian War.#p20The small silver coins of Judah rarely occur in
+    32  controlled excavations. ARIEL [199] reports that even the earliest issues, thought to be of the Persian period, were found together with coins of Ptolemy II in
+    32  the excavations and survey of the caves of the Northern Judaean Desert. ESHEL and ZISSU [221] also report a Yehud coin with Ptolemaic types from the
+    32  1999u20132001 excavations at Horvat u2018Ethri. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    33      "Many Israeli excavations and an archaeological survey have reported Ptolemaic bronze coins, mainly of Ptolemy I and II and mainly of the Alexandria and
+    33  Tyre mints, usually in small numbers (ADAN-BAYEWITZ AND AVIAM [194], 2 coins; AMITAI-PREISS [198], 2 coins; ARIEL [199], 12 coins; ARIEL [200], 8 coins; ARIEL
+    33  [202], 1u20133 coins; ARIEL [203], 1 doubtful; BARKAY [206], 33 coins; BEN-TOR, BONFIL, AND ZUCKERMAN [207], 3 coins; BIJOVSKY [209], 1 coin; BIJOVSKY [210], 1
+    33  coin; BIJOVSKY [211], 3 coins; EVANS [222], 3 coins; GITLER [226], 6 coins; GORZALCZANY [230], 4 coins; GORZALCZANY AND BARKAN [231], 4 coins; HERBERT AND
+    33  BERLIN [234], 15 coins; KINDLER [236], 12 coins; KINDLER [237], 10 coins; Meir [240]. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics,
+    33  1996-2007. ISAW Papers 2.",
+    34      "Overall these reports, like the finds from Beirut, seem to indicate a gap for the reign of Ptolemy III, but this probably reflects erroneous attributions
+    34  in the standard works of reference.#p21The excavations at Gan Soreq have yielded a bronze of Ptolemy VIII from the Cyrene mint, the first securely identified
+    34  and provenanced Cyrenaican found in Israel (personal communication from Donald Ariel).#p22Coin finds at two Israeli sites have clarified the history of
+    34  Hellenistic city foundations. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    35      "In analyzing the stamped amphora handles from the Bet Shean excavations, ARIEL [201] recalls a hoard of tetradrachms of Ptolemy II, found in the University
+    35  of Pennsylvania excavations of Tel el Husn between 1921 and 1933.These finds, together with the distribution of excavation coins, point to the conclusion that
+    35  Hellenistic Nysa-Scythopolis was founded in the Ptolemaic period at Tel el Husn and relocated to Tel Istabbah in the Seleucid period. EVANS [222] observes that
+    35  the excavations at Caesarea Maritima have yielded only three Ptolemaic bronzes but numerous Seleucid coins. Source: C. Lorber and A. Meadows. (2012) Review of
+    35  Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    36      "Consequently she argues against an early date for the foundation of Stratos Tower, preferring a date after the Seleucid conquest.#p23STEFANAKIS [253]
+    36  reviews recent research on Ptolemaic coinage (as of 2000) and surveys the evidence for its circulation in Crete.Numerous didrachms of Ptolemaic Cyrenaica were
+    36  hoarded in Crete or overstruck by Cretan cities; the influx of Cyrenean coins can probably be explained by the involvement of Cretan mercenaries in the
+    36  campaigns of Ophellas and Magas, and/or treaties of Magas with Gortyna and the confederacy of the Oreioi. Source: C. Lorber and A. Meadows. (2012) Review of
+    36  Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    37      "Ptolemaic royal coinage found in Crete is dominated by issues of Ptolemy II, perhaps to be associated with the Ptolemaic garrison established at Itanos by
+    37  Patroclus.The Lagid substitution of bronze for silver coinage is reflected in the finds for Ptolemy III and his successors.#p24CHRYSSANTHAKI [217] provides a
+    37  detailed account of Ptolemaic coin circulation in Greece and the Aegean.Along the Thracian coast and in the Aegean Ptolemaic coinage is quite scarce and its
+    37  presence does not correlate with areas under Ptolemaic control, an indication that the Ptolemies did not impose the use of their coinage. Source: C. Lorber and
+    37  A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    38      "Ptolemaic coinage in Greece reflects the dynastys policy of intervention in Greek affairs, both through direct military action and through subsidies and
+    38  donations.Silver subsidies from Ptolemy I and II enabled Athens to strike the series of tetradrachms of the style called quadridigitu00e9, which financed the
+    38  Chremonidian War.The extensive military operations of the Ptolemaic admiral Patroclus in Attica during that war are attested by bronzes of Ptolemy II marked
+    38  with a shield and monograms. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    39      "Portrait bronzes of Ptolemy III have been found at sites throughout the Peloponnesus; at Corinth they were officially accepted into the citys monetary
+    39  system, without countermarking, and circulated for nearly a century until the destruction of Corinth in 146.Publication of the excavation coins from
+    39  Methana-Arsinoe in Greece provides an occasion for GILL [224] to outline the citys coinage. BIRGE, KRAYNAK, AND MILLER [212] allude to Ptolemaic coin finds in
+    39  the Nemea excavations.#p25The coin finds from the excavations at the Decumanus Maximus in Carthage, published by BALDUS [204], include one bronze coin of
+    39  Ptolemaic Cyrenaica.#p26MANGANARO [239] surveys the Ptolemaic coins found in Sicily, the majority of which are bronzes with a shield symbol, ostensibly of
+    39  Ptolemy II (for reattribution of this coinage, see WOLF AND LORBER [287]. STANNARD [252] reports that Ammon/Isis headdress bronzes account for 2.6% of all coins
+    39  found at Liri in Italy and are also overstruck with local imitative Roman types, mostly quadrantes.#p27Ptolemaic coins have strayed far from their usual areas
+    39  of circulation. TALVIO [255] reports tetradrachms of Ptolemy II and Ptolemy VI found in Finland. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic
+    39  Numismatics, 1996-2007. ISAW Papers 2.",
+    40      "A bronze of Ptolemy IV was the earliest coin in the large hoard from the ford of Saint Lu00e9onard (Mayenne) [193].#p28Coinage in the Ptolemaic
+    40  economy1996-2001Two articles by VON REDEN have sought to place Ptolemaic coinage against the background of other monetary media and customs in Hellenistic
+    40  Egypt.In the first [122] she turns her attention to the question of how far the Ptolemies were responsible for the monetisation of Egypt. Source: C. Lorber and
+    40  A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    41      "She notes the extent to which Egypt was already monetised in the dynastic period, stressing the use of money of account and the use of this in circles
+    41  where physical forms of money did not in fact circulate, and the ability of different social strata to participate in the resulting monetary economy.Set against
+    41  this background, the introduction of coinage into Egypt can be seen as restrictive rather than enabling. Source: C. Lorber and A. Meadows. (2012) Review of
+    41  Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    42      "For this reason, and because of the weakness of local silver supplies, the local economy of Egypt, she suggests, continued to operate on a money of account
+    42  basis, which may in turn account for the observable instability of ratios between silver (interstate currency) and bronze (epichoric).In the second [123] she
+    42  develops this idea of dichotomy in the monetary instruments of Ptolemaic Egypt, by stressing on the one hand the symbolic value of high-value precious metal
+    42  coinages, and on the other the ability of the chora to function economically in the absence of physical monetary instruments. ROWLANDSON too [110] has
+    42  emphasised the extent to which the coin in Ptolemaic and Roman Egypt can be deeply embedded within existing non-coin monetary practice, such as to make its form
+    42  almost incidental.#p29BOGAERT has produced two further studies on the workings of banks in Ptolemaic Egypt. Source: C. Lorber and A. Meadows. (2012) Review of
+    42  Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    43      "In one [67] he examines them from an operational point of view.Of particular numismatic interest is his summary of an earlier article (Historia 33 (1984),
+    43  pp. 181u2013198) on the state-contracted banking activities, including the role of such banks in the exchange of foreign currency for local, and epichoric
+    43  silver for bronze.He also discusses the role of private banks in the latter activity.In the other [66] he gives an overview of banking in Ptolemaic Egypt and
+    43  the overseas dependencies, providing a list of known banks and bankers arranged geographically.#p30Once known as the copper standard, but to be re-christened,
+    43  as LE RIDER and CADELL [72] insist, the idea of a bronze standard distinct from the silver standard has long been current among papyrologists and numismatists.
+    43  Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    44      "The supposition of a dislocation between the two u2018standards, imposed by the Ptolemaic rulers from the reign of Philopator onwards seemed a necessary
+    44  conclusion to be drawn from the escalating bronze prices observable in the papyri from this period onwards.This assumption has lain behind the book length
+    44  attempt by MARESCH [98] to establish the relative values of bronze and silver throughout the history of Graeco-Roman Egypt. Source: C. Lorber and A. Meadows.
+    44  (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    45      "His discussion is unfortunately compromised in some of its detail by various assumptions concerning the bronze coinage, arrived at in collaboration with
+    45  Weiser that seem at best questionable. LORBER [300] in her review of the latter authors catalogue of the Cologne collection, and in her other publications on
+    45  the third century bronze (see above), has highlighted some of the problems.Nonetheless MARESCHs basic conclusion, that the silver and bronze standards were
+    45  unified under Ptolemy II and then became dislocated under Philopator may well be close to the truth. Source: C. Lorber and A. Meadows. (2012) Review of
+    45  Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    46      "The question of the relationship between the pre- and post-reform bronze of Philadelphus remains moot, however.That the steep rise in prices was the result
+    46  of dirigiste policy on the part of the Ptolemaic rulers has recently been called into question, however, by CADELL and LE RIDER [72].Instead of seeing in the
+    46  price rise a reaction to a devaluation of the bronze coinage, they suggest that the rise in prices may simply have been the result of inflation, due to an
+    46  increase in the money-supply. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    47      "Certainly, on the basis of the grain prices they trace over the third and early 2nd century BC, the inflation seems not to be as regular or extreme as
+    47  earlier theories of royal intervention have postulated.The rupture between the silver and bronze standards was a reaction to this price inflation: an attempt by
+    47  the administration to maintain the price of grain for the foreign market by fixing it in silver drachms, and allowing the bronze in use in the chora to find its
+    47  own level against this. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    48      "Whether an increase in money supply could have been sufficient to cause inflation at the level at which it occurred, remains a matter of uncertainty: doubt
+    48  is cast on this by BAGNALL [291]. HUSTON and LORBER [178] add further doubts about the mechanism adopted by the authorities to deal with the inflation.They
+    48  suggest that, in the monetary reform they have identified in the reign of Ptolemy IV, there may be evidence for an attempt on the part of the government to
+    48  demonetise old coin stock and reduce the money supply. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    49      "It remains unclear whether the obvious reductions in weight standard now identified by LORBER and HUSTON [291] in the reigns of Ptolemies IV and V were
+    49  solely reactive, or whether they were part of the driving force behind inflation at this period.It seems nonetheless clear that this problem is more complex
+    49  than had for long been thought.#p312002-2007Both numismatists and economists have become deeply interested in the role of coinage in the Ptolemaic economy,
+    49  seeking to determine the degree of monetization and to define the operations and character of the economy. Source: C. Lorber and A. Meadows. (2012) Review of
+    49  Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    50      "In addition, numismatists and papyrologists continue to draw on written documents, and to compare them to the numismatic record, in an attempt to refine
+    50  the chronology and to establish the face values of Ptolemaic bronze coins.So many important and detailed publications have appeared that it is impossible to
+    50  summarize them adequately.#p32Several works in this subject area include accounts or partial accounts of the development of Ptolemaic coinage (BURKHALTER AND
+    50  PICARD [68], CUVIGNY [75], LE RIDER AND DE CALLATAu0178 [91], MONSON [104], MUHS [105], PICARD [20], VON REDEN [120], [121]. Source: C. Lorber and A. Meadows.
+    50  (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    51      "There is growing consensus that the early Ptolemies imposed monetization through their tax policies, and several scholars emphasize the connection between
+    51  the new tax laws promulgated after 264 (partially recorded in Rev.) and the introduction of an expanded system of bronze denominations in the late 260s (MANNING
+    51  [97]; MUHS [105]; PICARD [20], [282]; VON REDEN [120], [121].Some scholars also underline the profits inherent in closing the economy to foreign coinage, in
+    51  striking gold coins underweight, and in promoting the use of fiduciary coinage for internal payments (PICARD [20]; LE RIDER AND DE CALLATAu0178 [91].#p33LE
+    51  RIDER AND DE CALLATAu0178 [91] collaborate in a comparison of the monetary systems and fiscal policies of the Ptolemaic and Seleucid kingdoms. Source: C. Lorber
+    51  and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    52      "They contrast the closed economy of the Ptolemies with the open economy of the Seleucids, pointing out that both developed from models already present in
+    52  the Greek world.The authors central object is to define the role of coined money in both economies.They draw attention to the continuing importance of payment
+    52  in kind and are not persuaded that either government sought to impose monetization on rural areas. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic
+    52  Numismatics, 1996-2007. ISAW Papers 2.",
+    53      "Because both dynasties had ample reserves of precious metals in the form of plate, jewelry, and other luxury items, Le Rider and de Callatau00ff reject the
+    53  common assumption that monetary production was constrained by shortages of bullion.For these authors it reflects the preferences of the monarchs, whose
+    53  principal need for coinage was to support military preparedness.#p34PICARD [20] also sees the desire for a strong military as the principal motive behind Lagid
+    53  fiscal policies. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    54      "He discusses the early evolution of Ptolemaic coinage in relation to three of those policies: taxation in kind for the grain economy, to keep the price low
+    54  and to ensure that the king had a large supply for sale abroad; the money taxation of oil products, which were consumed internally; and the apomoira, which
+    54  extended the power of the treasury in the service of royal cult.#p35MANNING [97] treats coinage as an aspect of the development of the Ptolemaic state. Source:
+    54  C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    55      "Currency itself was an expression of sovereignty, as was the imposition of its use, effected through tax laws and through the introduction of Greek
+    55  financial institutions, especially banks and tax farming.Early Lagid economic policy was designed to ensure stability and predictability, to insulate the
+    55  treasury from risk, and only then to capture as much revenue as possible through taxation; the result was an economic intensification that eventually
+    55  contributed to rural unrest. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    56      "Within this framework, Manning discusses specific taxes required in cash; the codification of the legal traditions of the various ethnic communities; the
+    56  role of temples in the monetized economy; use of cash by the native Egyptians; and loans, interest rates, and the limitations of the credit market.In a chapter
+    56  on the relevance of Ptolemaic Egypt for studies of the ancient economy, VON REDEN [120] characterizes coinage and contracts as economic institutions whose
+    56  introduction, in combination with Ptolemaic royal ideology and rituals, served to integrate Egypt both politically and economically while stimulating economic
+    56  growth. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    57      "The papyrological evidence implies widespread commercial exchange within Egypt; however this was not a Greek market driven by individual profit seeking but
+    57  rather one in which many individuals were motivated by ideals of service to the monarchy and ambition for positions of power at the court or in local
+    57  hierarchies.The major purpose of the salt tax was to compel circulation of the kings coinage and to force the population into paid labor contracts. Source: C.
+    57  Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    58      "Local taxes collected in bronze coinage were recycled locally through paid labor, especially for maintenance of the irrigation system (under the Ptolemies,
+    58  even compulsory labor was paid by the local administration or set off against taxes).Von Reden mentions papyrological evidence for royal financial problems
+    58  under Ptolemy IV, describes his monetary reform, and refers to the subsequent redefinition of the bronze drachm as the stater of an independent currency. The
+    58  problems of the late third century indicate that the cohesion of the economy did not emanate from economic mechanisms alone, but depended importantly on the
+    58  authority and charisma of the king, which was maintained through extensive public ritual, aimed at both Greek and Egyptian subjects, in which coinage played a
+    58  part.#p36VON REDENS book on money in the Ptolemaic economy [121] is, like the two preceding studies, limited to the third century, and develops many of the same
+    58  themes, but in much greater detail. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    59      "Two chapters are devoted to the evolution of the coinage, covering familiar ground but also offering fresh ideas and useful information from the field of
+    59  papyrology.The early coinage was linked to the legitimization of Lagid rule, with gold coinage in particular associated with state payments and royal
+    59  cult.Precious metal coins were aimed at Alexandria, the harbors, and the economy of cleruchs, while bronze coins were intended for the chu00f4ra; although they
+    59  were exchangeable, these were essentially separate currencies, hoarded separately and usually separated in accounts. Source: C. Lorber and A. Meadows. (2012)
+    59  Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    60      "By the 230s precious metal coins had largely disappeared from the chu00f4ra, and exchange between silver and bronze currency became a matter of negotiation
+    60  and local policy, apparently controlled by royal banks.Monetization was uneven and in the chu00f4ra it could only be maintained by an extensive system of
+    60  credit.Under these circumstances prices were not sensitive to money supply, so that the inflation of the late third century cannot be explained by an oversupply
+    60  of coinage or a shortage of goods. (This conclusion ignores the current tendency of economists to consider credit as part of the money supply and the recent
+    60  painful lessens that credit can indeed lead to price inflation.) Von Reden critically reviews the documentary evidence for the inflation of the late third
+    60  century and suggests that the disappearance of monopoly banks (responsible for money changing) after the reign of Ptolemy III and of the salt tax after 217 may
+    60  have contributed to a piecemeal disintegration of the monetary system under Ptolemy IV, which culminated in the removal of most bronze coinage from circulation.
+    60  Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    61      "(In contrast, CLARYSSE AND THOMPSON [73] submit that the salt tax continued to be levied to the end of the Ptolemaic dynasty, and that the lack of records
+    61  is an accident of survival.) A sixty-fold elevation in wages toward the end of the century indicates that bronze coinage had become an independent currency in
+    61  which the bronze drachm served as a unit of account equivalent to one sixtieth of the silver drachm, consistent with the traditional Egyptian silver : bronze
+    61  ratio of 1 : 60. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    62      "The earliest unequivocal attestation of the new system is Tebt. III 829, dated 201.Another chapter details the exchange of bronze and silver and the
+    62  circumstances governing allagu00e9 (the commission paid to exchange bronze coinage for silver, or silver coinage for gold).The rest of the book minutely
+    62  examines every aspect of the Ptolemaic economy: money taxes and taxes in kind; rents; cash wages and consumption allowances of oil, wine, and clothing; labor
+    62  contracting; loans, including those attached to a pending or actual sale, a lease, or a labor contract; the role of patronage and protection in economic life;
+    62  and banking.#p37In their study of the salt tax registers of Count [73], CLARYSSE AND THOMPSON provide many details about the process of census taking and tax
+    62  collection in the nomes covered by their documents, as well as a full account of the various taxes of third-century Egypt. Source: C. Lorber and A. Meadows.
+    62  (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    63      "They touch on some of the same themes as the above studies of monetization but rarely allude to coinage per se except as it is reflected in the rates of
+    63  the salt tax (which applied to animals as well as to people).Complexity is a characteristic of Ptolemaic rule, resulting from particular adaptations of ancient
+    63  institutions, such as the imposition of tax farming upon the existing system of tax collection by royal officials. Source: C. Lorber and A. Meadows. (2012)
+    63  Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    64      "Egyptian scribes continued to work in record keeping, but this was now a bilingual operation at the lower levels of the hierarchy, and the scribes had to
+    64  add the Greek terminology of drachms and obols to the Egyptian terminology of deben and kite.The latter, the authors note, was not well suited to recording the
+    64  small amounts of cash involved in salt tax levies.The salt tax, the obol tax, and other cash taxes were pervasive but modest, suggesting a symbolic importance
+    64  at least as great as their economic importance. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    65      "The rates were repeatedly lowered, a development that may reflect some difficulties in collection but also attests to the concern of the rulers for the
+    65  welfare of their subjects and their land.In addition various occupations and groups were exempt from these taxes, and the earliest exemptionsu2014of teachers,
+    65  athletic coaches, Dionysiac artists, victors in the national gamesu2014illustrate official Ptolemaic support for Greek culture. Source: C. Lorber and A.
+    65  Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    66      "These and other exemptions highlight the privileged position enjoyed by the immigrant population and by those natives who assisted in the royal
+    66  administration.Census registers confirm privileged status of immigrants vis-u00e0-vis Egyptians, evident in their larger households, slave holding, and
+    66  ownership of cattle and sheep.It was newcomers who invested in lucrative new sectors such as livestock, vineyards, orchards, and olive groves; these were cash
+    66  products sold mainly in Alexandria, and subject to money taxes, so that they contributed to the process of monetization. Source: C. Lorber and A. Meadows.
+    66  (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    67      "Another feature of Ptolemaic rule was the omnipresence of police, for whom pay figures are provided, and various kinds of armed guards.Cash for their pay
+    67  was not always on hand and sometimes improvised measures were necessary.#p38VON REDEN [119] is an early statement of her insight that money in circulation in
+    67  Ptolemaic Egypt was probably not sufficient to pay taxes, because of the large number of subjects taxed, so that credit extended by royal banks or between
+    67  private individuals was a vital precondition to the operation of the tax system. BINGEN [65] reprises his negative judgment of the same phenomena. Source: C.
+    67  Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    68      "For him, the formation of groups to put up even modest sums reflects both the insufficiency of cash in circulation and the insufficiency of individual
+    68  financial resources.The prevalence of borrowing is proof of the deleterious impact of the monetary economy, new tax structures, and Greek capitalism on native
+    68  Egyptians, many of whom were destitute and unable to amass even the small sums of cash required for the payment of taxes. Source: C. Lorber and A. Meadows.
+    68  (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    69      "Adding to their burdens was the need for sureties to guarantee future payments and appearances.#p39Other specific aspects of Ptolemaic taxation received
+    69  attention in our period.In a study of tax receipts from early Ptolemaic Thebes, MUHS [105] reports a great increase in the number and extent of money taxes
+    69  before year 22 of Ptolemy II, with most receipts for the yoke tax, levied on males only, probably at the rate of 4 kite (8 drachms) annually, and replaced by
+    69  the salt tax in 264. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    70      "The proliferation of money taxes led to the introduction of tax farming, first documented in a demotic contract dated year 14 of Ptolemy Muhs provides a
+    70  detailed account of the processes involved in tax farming and describes the numerous taxes, including the amounts of money paid.His discussions of the coinage
+    70  trace exchange rates, weight reductions, the development of bronze coinage and its face values, the introduction of the copper standard, and demotic accounting,
+    70  relying especially on Hazzard and Reekmans. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    71      "Documents pertaining to Ptolemaic taxation are far more rare outside of Egypt. MEADOWS [101] reinterprets an inscription at Argos that records donations by
+    71  the coregents Ptolemy VI, Ptolemy VIII, and Cleopatra II, and by several Cypriot cities.He suggests that the latter may represent the apomoira, and that these
+    71  donations to Argos could be related to the service of Polycrates of Argos to Ptolemy V, father of the three rulers.#p40CUVIGNY [75] surveys the use of the term
+    71  chrysous in Egyptian documents of the Ptolemaic and Roman periods. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW
+    71  Papers 2.",
+    72      "The form is adjectival, with stater understood, and outside of Egypt it referred to the gold stater on the Attic standard.In Egypt under the reign of
+    72  Darius II, numerous documents attest to the equivalence of the silver deben (c. 91g) and the Attic-weight gold stater, itself equivalent to 20 silver drachms or
+    72  87.5g of silver.In the Ptolemaic period the chrysous is rarely mentioned as the equivalent of 20 silver drachms except in a particular type of demotic marriage
+    72  contract involving a (probably fictive) payment from bride to groom of deben of silver from the treasury of Ptah, and translated in Greek registers as syngraphe
+    72  trophitis argyriou chryson drachmonu2014evidence that the term chrysous could be used to refer to silver. Source: C. Lorber and A. Meadows. (2012) Review of
+    72  Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    73      "This ambiguity is relevant to interpreting the term chrysoi in the Greek text of the Pithom Stele (Raphia Decree); Cuvigny concludes that it was used as an
+    73  accounting term only, reflecting the expenditure of 6 million drachms of unspecified metal.Another question that engages Cuvigny is the name of the quarter
+    73  mnaiaion: MARESH (Bronze und Silber (Opladen, 1995), p. 108) proposed that this coin was called a chrysous, but Cuvigny rejects the interpretation because the
+    73  only support for it comes from Oxy. XLIX 3455.28u201329, a theoretical document from the third or fourth century The nomenclature of gold coinage had an
+    73  additional role in metrology. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    74      "The term mnaiaion referred to an actual coin but was also a unit of weight; similarly, the term chrysous was the Greek equivalent for the deben as a unit
+    74  of weight.In this perspective, the deben, as a unit of weight equivalent to 20 drachms, was perhaps reduced to 72g to conform to the weight of 20 Ptolemaic
+    74  drachms of 3.27g.The tetarte was an accounting unit only, reckoned as one sixteenth of the mnaiaion and one quarter of the chrysous, but with no corresponding
+    74  coin.#p41BURKHALTER AND PICARD [68] review the papyrological evidence for the monetary units employed in different periods of Ptolemaic history, contrasting the
+    74  bronze drachm of the third century, which could (with the payment of allagu00e9) be exchanged for a silver drachm at a slight discount, with the bronze drachm
+    74  of the second and first centuries, which must have been a unit of account rather than an actual coin, since prices for this period are given in minae and
+    74  talents. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    75      "The actual record of coin production does not support the thesis of CADELL and LE RIDER (Prix du blu00e9 (Brussels, 1997)) that these prices were due to a
+    75  normal if aggravated inflationary process fueled by an excessive supply of money, but points instead to a monetary reform at the beginning of the second
+    75  century.Burkhalter and Picard also compare the Egyptian bronze coinages of Cleopatra VII and Augustus, both of which employed marks of value, and conjecture
+    75  that the 80-drachm bronze of Cleopatra was equivalent to an octobol on the silver standard, that of Augustus to a tetrobol. A lengthy table at the end of the
+    75  article summarizes relevant documents that record allagu00e9, silver/bronze conversions, penalties, and obols and fractions.#p42The monetary terms of the second
+    75  and first century are further confirmed from documents published by HAGEDORN [83], SCHENTULEIT [112], and SALMENKIVI [111], the last of whom also cites Berol.
+    75  inv. 25903 (Busiris, 86 ) for the conversion of silver drachms to copper drachms of account at the ratio 1 : 500. VERHOOGT [118], commenting on late second
+    75  century texts from Kerkeosiris, notes the mention of small sums in bronzeu20145, 10, 20, 50, 60, and 120 drachmsu2014and suggests these might correspond to the
+    75  face values of actual coins; as for larger sums, he reasonably proposes that they must have been stored in pouches or vessels. Source: C. Lorber and A. Meadows.
+    75  (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    76      "Verhoogt also reports six prices for the silver tetradrachm, ranging from 1500 to 2000 bronze drachms over a period of just a few years, and points out
+    76  that the price of the tetradrachm fluctuates even within individual accounts, presumably in response to the condition and/or weight of the coins involved.These
+    76  prices demonstrate that tetradrachms traded as market commodities, while the keeping of separate accounts for bronze and silver supports the idea of two
+    76  standards advanced by other papyrologists.#p43The publication and interpretation of papyri and ostraca continue to enlarge our dossier of actual prices,
+    76  penalties, wages, and concession fees and to confirm known patterns in the use of monetary units (COWLEY [74], KALTAS [85], MANNING [96], RODRIGUEZ [109],
+    76  SALMENKIVI [111], SCHENTULEIT [112], SOLDATI [114], VANDORPE [117], VERHOOGT [118]. MONSON [104] offers a particularly interesting study of the finances of
+    76  private religious associations, which assessed dues and penalties, paid death benefits, and provided aid to wrongly imprisoned members, all in cash. Source: C.
+    76  Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    77      "The wheat equivalents provided by the author show the annual contributions of office holders in the third-century Ghoran association sometimes exceeded the
+    77  price of a years supply of wheat.Also interesting is a demotic annuity contract of 176/5 published by FARID [80], in which a son promises 15 sacks of emmer
+    77  annually to his mother in exchange for her surrender of 10 silver pieces = 50 staters = 10 silver pieces, copper 24, kite 2.#p44Gold and Silver
+    77  Coinage1996-2001Price had regarded the opening of a mint at Alexandria for the Alexander coinage as an innovation of Ptolemy I (previous issues having been
+    77  produced at the mint of Memphis). Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    78      "This reconstruction has come under attack from LE RIDER [87], [90] who regards the earliest Egyptian Alexanders as the product of a new mint at Alexandria
+    78  set up by Cleomenes of Naucratis, prior to the assumption of the satrapy by Ptolemy.On this reconstruction, Ptolemy did not move his mint, but continued to use
+    78  one already in existence.In this respect the correct construction of the legend u0391u039bu0395u039eu0391u039du0394u03a1u0395u0399u039fu039d
+    78  u03a0u03a4u039fu039bu0395u039cu0391u0399u039fu03a5, which appears on some early tetradrachms of Ptolemy, is crucial. Source: C. Lorber and A. Meadows. (2012)
+    78  Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    79      "Price had regarded the adjective as qualifying the word u2018mint, and thus adverting to the new production of coinage at the city of Alexandria.However,
+    79  it is now clear that this must qualify u2018coin, and refer to the weight standard (this interpretation has recently been restated by KNOEPFLER
+    79  [86].#p45WHEATLEY [125] returns to the problem of the chronology of events in the eastern Mediterranean in the period 315u2013311, and the role of numismatic
+    79  material in fixing points in the chronology. A tetradrachm of Ptolemy I with types Alexander hd./Athena st. from the mint of Sidon dated year 22 (X) indicates
+    79  that the city was in Ptolemaic hands for at least part of 312/1. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW
+    79  Papers 2.",
+    80      "Since no Ptolemaic issue is known from the previous year (u03a6: 313/2), he argues that the battle of Gaza must have been fought late in that year
+    80  (312).#p46LORBER [300] offers a rearrangement of the order of silver issues of Alexandria c. 277u2013259 proposed by Davesne in his publication of the
+    80  Meydancikkale hoard, (a) to take account of the pattern of weight-loss observed on these issues in that hoard, and (b) to provide a clear break in 261/0 between
+    80  the use of the legends u03a0u03a4u039fu039bu0395u039cu0391u0399u039fu03a5 u0392u0391u03a3u0399u039bu0395u03a9u03a3 and
+    80  u03a0u03a4u039fu039bu0395u039cu0391u0399u039fu03a5 u03a3u03a9u03a4u0397u03a1u039fu03a3.#p47The famous papyrus dated 258 BC and alluding to officially required
+    80  exchange of coinage (PCZ 59021) has received attention from BOGAERT [67] and LE RIDER [88], a propos of the diagramma governing the exchange of coinage that it
+    80  presupposes; from DAVESNE [77] concerning the layers of official administration of the coinage that are revealed; and again from LE RIDER [89], who examines the
+    80  sense of lines 9u201316. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    81      "He endorses the reading of epichorion nomisma as u2018local coinage in the sense of the coinages local to the foreigners importing it to Egypt, viz., from
+    81  an Egyptian point of view, foreign gold coinage.He then surveys the coinage to which this might refer.#p48The relationship of gold coinage to silver has also
+    81  been examined by LE RIDER [88], [72], who makes the important point that where we know the names of gold coins they seem always to be couched in terms of their
+    81  value in silver (trichyson, mnaieion, pentekontadrachmon). Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    82      "This, he notes is an important point to remember in the case of the so-called gold octadrachms of Ptolemy II.Known as mnaieia (100 dr. coins) in the
+    82  contemporary sources, these coins, at c. 27.80g to do not weigh the equivalent of a Ptolemaic octadrachm (ideally 28.5g).Instead their weight is governed by the
+    82  gold-silver ratio.In this case the ratio is 1:12.8 and the mnaieia provide evidence for an increase in the ratio from the 1:12 evinced by the earlier
+    82  trichryson.#p49Three studies have brought the evidence of Ptolemaic gold and silver to bear on the matter of wartime expenditure under Philadelphus. DAVESNE
+    82  [78] has assembled the numismatic evidence for Ptolemaic activity during the Second Syrian War, including hoards, the opening of mints at Ake, Joppa and Gaza
+    82  and the legend change on Ptolemaic silver to u03a0u03a4u039fu039bu0395u039cu0391u0399u039fu03a5 u03a3u03a9u03a4u0397u03a1u039fu03a3 (which he sees as
+    82  programmatic). Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    83      "He reasserts his view that Sv. 894u20138, attributed by Svoronos to Ephesus, were minted at Aradus during the period of Ptolemaic control of the city and
+    83  reassigns the Ptolemaic issues of the Tarsus mint (Sv. 910u2013911) from the reign of Euergetes to that of Philadelphus in the context of the Second Syrian
+    83  War.Elsewhere, DAVESNE [79] also suggests that the well-attested spate of countermarking of Ptolemaic issues by the city of Byzantium is the result of the
+    83  subvention of Philadelphus to the city known from Dion. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    84      "Byz. 41 and that this occurred during the same war (the generally acccepted date of 280/79 for this episode would rule out such a connection, however: see
+    84  BRINGMANN, VON STEUBEN [6], p. 271).In fact, a more systematic treatment of the evidence by NOESKE [18] reveals that a sequence of 10 countermarks was used, the
+    84  earliest appearing on a Ptolemaic issue of 280, the latest on an issue of 246.Noeske notes that the first example of the countermark may be connected with
+    84  Demetrius testimonium, but suggests that Ptolemaic aid must have been ongoing. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics,
+    84  1996-2007. ISAW Papers 2.",
+    85      "However, it may well be questioned whether the countermarks have anything to do with Ptolemaic benefactions at all.In general, DAVESNE [79] finds no
+    85  particular links between the other Syrian Wars fought by Philadelphus (the hypothesised conflict of 281u201379 BC, and so-called First Syrian War of 274u20131)
+    85  and reform of or unusual activity at the Ptolemaic mints.Indeed the major monetary reform dated by Davesne to c. 265 BC is taken to be the reason that
+    85  Philadelphus could not involve himself in the Chremonidean War in 265/4. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007.
+    85  ISAW Papers 2.",
+    86      "Drawing on Davesnes figures for coin production by the first three Ptolemies (revisited by DAVESNE himself [79], [77]), RODRIGUEZ [108] comes to
+    86  essentially the opposite conclusion regarding the year 266/5.The spike on Davesnes graph of Ptolemaic emissions that occurs in this year is taken by Rodriguez
+    86  as evidence of Philadelphus gearing for the conflict.However, caution is required here. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic
+    86  Numismatics, 1996-2007. ISAW Papers 2.",
+    87      "This spike is produced in large part by Davesnes attribution of many undated Ptolemaic issues of the Tyre and Sidon mints to a single year on the basis of
+    87  their perceived weight loss in the Meydancikkale hoard. (To the material gathered by Rodriguez may now be added the hoard from Attica apparently of Chremonidean
+    87  War date published by LAGOS [123], which contained one specimen of Sv. class Z, series )#p50Another coinage often regarded as having a wartime context, in the
+    87  Third Syrian War, must now certainly be moved. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    88      "The precious metal issues in the name of Berenice II have received a considerable amount of attention of late. VAGI [116] has collected details of more
+    88  than twenty examples of the silver denomination which Svoronos (aware of just a single specimen: Sv. 988) regarded as an Attic weight dodecadrachm.The new
+    88  specimens, most if not all of which derive from a hoard of unknown origin that began to appear in commerce in the early 1990s, are in far better condition than
+    88  that known to Svoronos and have an average weight of 52.7g. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers
+    88  2.",
+    89      "Vagi thus reclassifies them as Ptolemaic weight pentekaidekadrachms. LE RIDER [72] has also questioned the weight standard of this silver, as well as the
+    89  accompanying large gold (Sv. 986). BAGNALL [291] plausibly suggests that the latter, weighing c. 43g, should be interpreted as a 1.5 mnaieion (150 drs.).
+    89  CACCAMO CALTABIANO [69], cf. [70] and [71] has argued strongly that the bulk of the gold issues in the name of Berenice cannot have been issued as early as the
+    89  240s. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    90      "The portrait is that of a middle-aged woman, and the control marks on these issues need also to be considered.Caccamo Caltabianos own date for the issues,
+    90  late in the reign of Ptolemy III cannot stand either however.Of the control marks they exhibit, E (Sv. 973) and chi-rho (Sv. 962) tie in to bronze coinage of
+    90  Ptolemy III that must have been in production from at least the middle of his reign until its end, while the controls u03a3 and u03a3u0395 (Sv. 991) link to
+    90  bronzes which seem now not to have been among the first issued by Philopator (Sv. 992u20133, 1148u20139). Source: C. Lorber and A. Meadows. (2012) Review of
+    90  Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    91      "If LORBER [93] is correct in the sequence she offers for these bronze issues, then the Berenice gold was apparently in production from around the 230s
+    91  until well after Berenices murder in 221 BC.#p51HAZZARD [177] republishes the Cyprus 1982 hoard (originally published by Mu00f8rkholm, NC 1987, pp. 156u20138,
+    91  and now in Copenhagen), and uses it to provide a date span of c. 204u2013166 BC for the Dionysiac silver issues it contains (Sv. unlisted x2, 1786, 1789, 1794).
+    91  Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    92      "He goes on to suggest that the rash of small denominations and fractional silver of this type issued on Cyprus in the early 2nd century was brought about
+    92  by the dislocation between the silver and bronze standards at this time: contemporary bronzes no longer served as denominations on the silver standard.#p52On
+    92  the basis of control marks shared with later Seleucid issues, LORBER and KOVACS [95] have attributed certain Serapis and Isis/eagle on thunderbolt tetradrachms
+    92  (as Sv. 1136 and var.) to the mint of Soli in Cilicia. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    93      "Soli thus apparently became a royal mint under Ptolemy V, probably during the Fifth Syrian War, before being employed by Antiochus III after his conquest
+    93  of the region in 197 BC.Interestingly, two of the controls in question also appear on standard Paphian silver of Ptolemy V (Sv. 1302u20135).#p53On the basis of
+    93  die-links and an overstrike, LORBER [300] has also set out a revision of the order of the portrait issues of Ptolemy V proposed by Mu00f8rkholm (Essays
+    93  Thompson, pp. 203u2013214).#p54The so-called u2018coins of an uncertain era continue, unnecessarily, to cause confusion. Mu00f8rkholm (NNu00c5 1975u20136, pp.
+    93  23u201358) brilliantly reattributed these to the civic mint of Aradus. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW
+    93  Papers 2.",
+    94      "More recently Hazzard (see eg.Ptolemaic Coins (Toronto 1995) has suggested again that they are official Ptolemaic issues produced at a hitherto unattested
+    94  mint at Pelusium, and dated according to a hitherto unattested era of u2018Soter.The findspots alone of these coins strongly suggest that Mu00f8rkholm was
+    94  correct and Le Rider (BCH 119 (1995) pp. 391-404) has given a clear exposition of the prevailing monetary system of the region which would have given rise to
+    94  such imitations at Aradus. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    95      "Nonetheless confusion now reigns. CACCAMO CALTABIANO [69] has returned to the notion that the era is Ptolemaic (beginning in 311). PITCHFORK [43], nos. 34
+    95  and 73) has them as royal issues produced at Aradus. NOESKE [41], nos. 395u2013406) has them as civic issues of Aradus. LE RIDER [72] sits on the fence, but is
+    95  attracted by the re-reading of the earliest dated issue by LORBER [300] as year 42, which coincides on Hazzards Soter era with the accession year of Ptolemy IV.
+    95  LORBER [300] has rightly cast doubt upon Hazzards thesis.#p552002-2007In his masters thesis OLIVIER [280] investigates every aspect of Ptolemaic gold coinage.
+    95  Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    96      "For each separate category of the coinage he reviews all relevant hoards, reports the results of metallurgical analyses conducted at the Centre Ernst
+    96  Babelon, and discusses the chronology (which remains unresolved for many series).In addition he examines the role of gold coinage in the Lagid monetary system:
+    96  the evolving gold/silver ratio, the likely commercial uses of Ptolemaic gold coinage, and the possible exchange rates available to foreign merchants. Source: C.
+    96  Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    97      "Olivier demonstrates that each denomination of the Attic-weight gold coinage of Queen Berenice could also exchange on the Lagid standard and proposes that
+    97  this coinage was struck for Ptolemaic troops stationed in or near Seleucid territory, in which case the queen honored on the coinage should be Berenice
+    97  Syra.Other topics include the possible use of metallurgical analyses to localize mints; the sources of gold; and estimates of the volume of production of
+    97  mnaiaia.#p56The coinage of Ptolemy I has attracted the interest of various scholars. LE RIDER [273] and LORBER [275] both find that the Demanhur hoard implies a
+    97  date of 324/3 for the opening of the Egyptian mint, though they disagree about its location, Le Rider favoring Alexandria and Lorber Memphis. COHEN [8]
+    97  vacillates on the location of the mint but uses a long footnote to review the scholarship and ancient sources relevant to interpreting the coin legends
+    97  u0391u039bu0395u039eu0391u0394u039du03a1u0395u0399u039fu039d u03a0u03a4u039fu039bu0395u039cu0391u0399u039fu03a5 and
+    97  u0391u039bu0395u039eu0391u039du0394u03a1u0395u0399u039fu039d. DAHMEN [274] notes that the gold staters with Alexanders portrait and a prow reverse were the only
+    97  Ptolemaic coins of their time to circulate outside Egypt and suggests a connection with the Ptolemaic successes on Cyprus. Source: C. Lorber and A. Meadows.
+    97  (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    98      "LORBER [275] cites control links between silver and bronze coinage to fix the first reduction of the tetradrachm to 306/5, with subsequent dates lowered
+    98  accordingly; the weight reduction thus appears as an emergency response to the catastrophic losses in the battle of Salamis. RODRIGUEZ [283] reconstructs
+    98  Ptolemys military assets and correlates changes in his coinage with his military policy, emphasizing iconographic appeals to Macedonian mercenaries but also
+    98  associating the revival of gold coinage with the necessity of rebuilding the Lagid fleet after the disaster at Salamis. Source: C. Lorber and A. Meadows. (2012)
+    98  Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+    99      "In a paper on the closing of the Ptolemaic monetary economy, DE CALLATAu0178 [265] envisions a two-stage reform of the coinage, with a brief reduction of
+    99  the tetradrachm to c. 14.90 g around 300, followed by a final reduction to c. 14.25 g around 295.His reexamination of the Alexandrian tetradrachms of Ptolemy I
+    99  in the Meydancikkale hoard reveals that the number of obverse dies has been overestimated and identifies numerous obverse die links between coins with different
+    99  control marks. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   100      "He estimates that ten emissions of tetradrachms were produced within a short period of time, perhaps as little as two years.#p57WHEATLEY [286] examines
+   100  Sidons year 22 tetradrachms of Ptolemaic type to date the battle of Gaza.In a separate paper [284] he reconsiders the sequence of tetradrachm dies at Tyre
+   100  against the historical background and reaches the conclusion that Ptolemy did not get permanent possession of Tyre and Sidon until 289 or early 288.#p58GITLER
+   100  and LORBER [268] catalogue the rare sub-drachm silver fractions of Ptolemy I, including a new obol variety struck in Palestine after the battle of Gaza. ARIEL
+   100  [199] criticized the various proposals (as of 2002) concerning the chronology of the small silver coins issued in the name of the province of Judah, including
+   100  those with Ptolemaic types. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   101      "Subsequently GITLER and LORBER [269] assembled a corpus of Ptolemaic Yehud issues.Their commentary essays a relative and absolute chronology based on
+   101  types, die axes, and comparison with Alexandrian coinage; metrological and metallurgical analyses are appended.#p59DAVESNE [263] expresses his view that
+   101  Ptolemaic minting on Cyprus commenced immediately after recovery of the island in 295.For Asia Minor he recognizes only two Ptolemaic mints, Ephesus and Tarsus,
+   101  and limits their activity, as well as the penetration of Ptolemaic hoards into Asia Minor, to the years 265u2013255 and 246u00acu2013240. Source: C. Lorber and
+   101  A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   102      "His reattribution to Aradus of some coins considered Ephesian by Svoronos is rejected by DUYRAT [266].#p60In a book on Ptolemaic propaganda, HAZZARD [270]
+   102  pulls together various arguments he has developed over the years for an era of Ptolemy Soter.He demonstrates that the epithet Soter was not associated with
+   102  Ptolemy I in official usage until 261/0, when it became the regular legend of Ptolemaic tetradrachms; it was not introduced in the dating protocols of legal
+   102  documents until 259. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   103      "Hazzard associates these changes with the introduction of a Soter era in January 262, whose purpose was to fix the celebration of the Ptolemaieia in
+   103  relation to astronomical events.In Hazzards view, the so-called era tetradrachms and didrachms are dated by this era and are official Ptolemaic issues emanating
+   103  from Pelusium.#p61Comments offered by MEADOWS in the last Survey of Numismatic Research inspired CALTABIANO [262] to reiterate her theory that Berenice II
+   103  exercised a right of coinage separate from that of Ptolemy III, and that the coinage of this queen is to be dated after her husbands death. Source: C. Lorber
+   103  and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   104      "According to Meadows, control links between the precious metal coinage in the name of Berenice and bronze coins in the name of King Ptolemy imply a
+   104  chronology extending from the 230s (approximately) until well after Berenices murder.Caltabiano submits that contemporary minting of these coinages would
+   104  violate the normal hierarchy of political power, which was always reflected in the coinage, unless the bronze coins were struck during a period when Ptolemy IV
+   104  played a subordinate role, i.e., during a regency of Berenice II after the death of Ptolemy III. (This solution is problematic, not only because the regency in
+   104  question is unattested in the historical record, but also because it would have to accommodate at least three large issues of bronze coinage, including one of
+   104  the largest in Ptolemaic history, the series marked with the letter ) Caltabiano also attempts to reconcile her low chronology with the record of third-century
+   104  bronze hoards but in the process confuses two different reforms, one being the reduction of the bronze weight standard with the introduction of the ??? uf025
+   104  series and the other being the introduction of a new accounting unit, ostensibly under the reign of Ptolemy IV.#p62DUYRAT [266] updates Mu00f8rkholms corpus and
+   104  die study of the Ptolemaic era coinage and offers a critical review of the relevant scholarship. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic
+   104  Numismatics, 1996-2007. ISAW Papers 2.",
+   105      "Having emphasized the Seleucid sympathies of Aradus, she is skeptical of Mu00f8rkholms tentative attribution of the era coinage to Aradus and favors a mint
+   105  in the Ptolemaic province of Syria and Phoenicia. LORBER [278] publishes an era tetradrachm dated year 115, belonging to the final phase of the era coinage
+   105  which was formerly known to comprise didrachms only.She also reviews the scholarly controversies and concludes that Hazzard has arrived at correct dates, even
+   105  if his theory of a Soter era remains problematic. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   106      "She accepts Hazzards claim that this coinage was introduced into Coele Syria and Phoenicia in connection with the Syrian Wars but proposes that it was
+   106  carried there from Cyprus by the Ptolemaic fleet.#p63In a paper on seal impressions from Kedesh, ARIEL and NAVEH [260] note the correlation between the
+   106  inauguration of the era of the people of Tyre in 275 and the date proposed for the beginning of Ptolemaic coinage at Tyre by DAVESNE (Le Tru00e9sor de
+   106  Meydancikkale, Gu00fclnar II, p. 266). Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   107      "In their view, the correlation is probably significant. LORBER [276] shows that Tyre was the probable mint of tetradrachms of Ptolemy V bearing his epithet
+   107  Epiphanes, and of a complex of precious metal issues that share its monogram and spearhead symbol.#p64Bronze Coinage1996-2001A hoard of 252 coins seen in
+   107  commerce in Jerusalem in 1991 provides DAVESNE and LEMAIRE [173] with the opportunity to discuss the bronze coinage under Ptolemies I and II, before the latters
+   107  reform in the 260s. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   108      "Under Ptolemy I (c. 310u2013300) two denominations were produced (20u201322mm, 9g; 16u201317mm, 5g).Subsequently (c. 300 onwards) these two denominations
+   108  were maintained (the larger with a change of type) and supplemented by one smaller module (11mm, 2g) and two larger (26u201328mm, 18g; 32u201335mm, 28g).Under
+   108  Philadelphus mints opened for this coinage on Cyprus.The authors speculate as to which of the earlier two denominations (9g or 4.5g) was the chalkous, and thus
+   108  as to the nature of the other denominations, and the ratio of bronze to silver values. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics,
+   108  1996-2007. ISAW Papers 2.",
+   109      "In a subsequent study DAVESNE [76] argues instead that the smallest denomination, now described as weighing c. 1g is to be seen as the chalkous.If, as
+   109  PICARD [107] suggests, there is a continuity between the bronze systems of Ptolemy I and the reformed system of Ptolemy II, the ascertainment of the ideal
+   109  weight of the chalkous at the earlier period is of particular interest.For example, if this was in the order of 1.5g (so PICARD, [107].), then a drachma of
+   109  bronze on the same standard would have had an ideal theoretical weight of c. 72g. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics,
+   109  1996-2007. ISAW Papers 2.",
+   110      "Since this now appears to have been the weight of the the principal bronze denomination after Philadelphus reform of the coinage in the 260s (see below),
+   110  then such a conclusion has clear implications for the nature of Philadelphus reform.It would be come one of denomination, not of standard.As PICARD [106],
+   110  elsewhere notes, if the bronze of the Ptolemies is simply to be viewed as a replacement for silver fractions no longer being struck, then their policy has
+   110  parallels elsewhere in the Greek world at the same time. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   111      "Some weight tables are urgently needed for the further discussion of this problem, which remains unresolved.#p65In a detailed review of the hoard evidence
+   111  for Ptolemaic bronze coinage in the reigns of Ptolemies II-IV, LORBER [93] has made a considerable advance in the ordering and attribution of the post-reform
+   111  third-century bronze.She has, moreover, come to the startling conclusion that the largest bronze denomination (her module A: c. 45mm; 96g) was issued
+   111  predominantly under Euergetes, not as has been thought since Svoronos, under Philadelphus. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic
+   111  Numismatics, 1996-2007. ISAW Papers 2.",
+   112      "Instead the largest, and standard, bronze coin under Philadelphus was, for most of the time, her module B (c. 40mm; 72g).This was replaced, she suggests,
+   112  for a brief period at the beginning of Euergetes reign with module A, before module B again became the standard denomination in the later reign of Euergetes and
+   112  the beginning of that of Philopator.She further hypothesises that the two denominations alternated in use as the bronze drachma. Source: C. Lorber and A.
+   112  Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   113      "The reasons for these oscillations remain a matter for speculation. LE RIDER [88], [72] too has turned his attention to the problem of the bronze
+   113  drachma.He notes one clear advantage of viewing the 72g coin, rather than the 96g, as the drachma.If the former were the drachma, then it is possible to
+   113  identify an obol (Head of Alexander/eagle, wings open, c. 12g) among the bronze coins issued by Philadelphus. Source: C. Lorber and A. Meadows. (2012) Review of
+   113  Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   114      "There is no coin that would correspond to an obol at a 96g drachm standard.#p66On the basis of the near simultaneous closure of several of the hoards under
+   114  consideration in the reign of Philopator, together with the appearance of the cornucopia countermark on module C (c. 38mm; 48g) issues of Philopator, HUSTON and
+   114  LORBER [178] go on to posit a further currency reform under this monarch which saw the reduction of the standard (largest) bronze denomination from module B to
+   114  around that of module C (from c. 72g to c. 45g). Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   115      "Earlier module C issues were countermarked and a new type began to be struck at Alexandria at a slightly lower weight of 40g, and characterised by an
+   115  obverse Ammon head with enlarged horn and no basileion, and two eagles on the reverse. A date of c. 207/6 BC for the reform is posited, on the basis of the
+   115  absence of the new type enlarged horn issues from hoards buried apparently in the context of the Upper Egyptian Revolt of 207/6u2013206/5. Source: C. Lorber and
+   115  A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   116      "Shortly thereafter, in the reign of Epiphanes (c. 200 BC), they suggest, a further reduction in weight to c. 29g took place.An important corollary of their
+   116  hoard study is the reattribution of the extremely common Sv. 1424 to the reign of Ptolemy V, and the observation that this issue should probably be divided in
+   116  two (two distinct standards being indicated by weight tables).#p67In an article devoted to those bronze issues with a lotus-blossom control mark, LORBER [94]
+   116  has succeeded in disentangling the previous confusion surrounding these coins. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics,
+   116  1996-2007. ISAW Papers 2.",
+   117      "On the basis partly of control symbols shared with other bronze issues, in one case of countermarking, and general stylistic grounds, she makes the
+   117  following attributions: Sv. 841u20133 and Paphos II 47u201351 u2013 Phildelphus/Euergetes; Sv. 1409, 1411, 1412u201314 u2013 Philopator; Sv. 636u20137 u2013
+   117  Epiphanes; Sv. 1396u20131402, 1403u20138 u2013 Philometor.The lotus-blossom symbol, she concludes was a specifically Cypriot symbol and identifies issues
+   117  produced at a mint or mints on the island. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   118      "If this identification is accepted then an interesting pattern of circulation emerges whereby it is clear that after the reign of Euergetes only Cypriot
+   118  bronzes circulate on Cyprus; similarly Cypriote bronze ceased to circulate in Egypt from the same point until the early 80s BC.Another important consequence of
+   118  this and Lorbers other work on the third century bronze is that we can now see that issues with the same control marks were produced under Philopator at the
+   118  mints of Alexandria, Tyre, Cyrene and Cyprus.#p68PICARD [246], [247] has published a hoard from excavations at Alexandria of bronzes of an entirely new type.
+   118  Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   119      "There are four modules: 1.9u20132 cm, 7.13g; 1.5u20131.6 cm 3.64g; 1.2u20131.3 cm, 2.05g; 0.9u20131 cm, 0.942g.The three largest have the same types (head
+   119  of Apollo laur. r./falcon st. l.), while the smallest has the same obverse, but a different reverse (thunderbolt).Picard suggests a second-century date for the
+   119  new coins and argues that the four denominations are obol, hemiobol, dichalkon and chalkous. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic
+   119  Numismatics, 1996-2007. ISAW Papers 2.",
+   120      "If he is right about the denominations, however, we may extrapolate a bronze drachm weight of c. 45g at the time of their issue.This conforms to the bronze
+   120  standard in use late in the reign of Ptolemy IV and early in that of Ptolemy V (so HUSTON and LORBER [178] u2013 see above), and may suggest a late 3rd century
+   120  date.However, the absence of legends and control marks for the new bronzes creates uncertainty as to the authority behind them, and indeed as to whether they
+   120  are coins (as opposed to tokens), at all. MEADOWS [103] suggests that they may been used in some temple/sanctuary context.#p69MATTINGLY [100] has suggested
+   120  moving the Ptolemaic portrait bronzes well known from finds in the Peloponnese (Sv. 1000) out of the reign of Ptolemy III and into that of Ptolemy V, seeking to
+   120  connect their appearance in Achaea with the subvention to the League by Epiphanes recorded by Polybius (22.9.3). Source: C. Lorber and A. Meadows. (2012) Review
+   120  of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   121      "However, the portrait on these issues is very close to that on Sv. 996-9 and these latter are certainly coins of Euergetes.#p70GITLER and KUSHNIR STEIN
+   121  [82] note a curious pattern of Ptolemaic coin finds in Palestine.Few Ptolemaic pieces are found there after the Ptolemaic loss of the area at the end of the
+   121  third century, with the exception of a curiously high representation at Dora, Ake and the Galilee area of Cypriot bronzes as Sv. 1698, usually attributed to
+   121  Ptolemy IX or They suggest that the most probable occasion for such an influx of this particular type is the invasion of Phoenicia launched from Cyprus by the
+   121  Ptolemy IX in 103/2 BC. A terminus ante quem can thus be suggested for Sv. 1698, though the identity of the issuer of these and related issues (Sv. 1694-1714)
+   121  remains uncertain. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   122      "The authors also note the existence of a module unknown to Svoronos: c. 16-17mm; head of Zeus-Ammon/ single ribboned cornucopia.#p712002-2007LORBER [274]
+   122  presents a synopsis of the development of Ptolemaic bronze coinage in Egypt.From her studies of third-century hoards she deduces that the bronze drachm was
+   122  normally a coin weighing c. 72 g, but that a heavier weight standard based on a drachm of c. 96 g was temporarily in effect during part of the reign of Ptolemy
+   122  III. PICARD [20],[282] prefers a consistent set of six denominations for this period, with a drachm of 65u201375 g and the heaviest denomination valued as an
+   122  octobol. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   123      "Picards reconstruction depends in part on his perception that types were used to identify the various denominations; this leads him to consolidate two
+   123  pairs of neighboring denominations with identical types in Svoronos system of eight denominations for Ptolemy II.However, FAUCHER [60] reports that his
+   123  metrological study confirms two separate weight populations for each of the contested twin denominations. VON REDEN [265] rejects the idea that the bronze
+   123  drachm must have existed as an actual coin and notes the lack of a demotic term for drachm. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic
+   123  Numismatics, 1996-2007. ISAW Papers 2.",
+   124      "Based on salt tax rates and the existence of a demotic term for obol, she proposes that the bronze of c. 72 g was a triobol, that of c. 96 g a
+   124  tetrobol.Drawing on the traditional Egyptian silver : bronze ratio of 1 : 60 (dating back to the Ramesside period), she demonstrates that a later bronze
+   124  tetrobol of c. 72 g struck under Ptolemy IV could have been equivalent to 40 drachms under the new system of accounting put in place toward the end of the
+   124  centuryu2014but she does not confront the evidence that this denomination was selectively removed from circulation toward the end of Philopators
+   124  reign.#p72PICARD [281] reports a second-century bronze hoard from excavations at Tebtynis replicating the contents of the earlier Tebtynis hoard IGCH 1705 and
+   124  other hoards from the Fayum to Lower Egypt. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   125      "On the basis of these hoards he submits that bronzes with the double eagle reverse remained in circulation over many reigns, filling the period between
+   125  Isis head bronzes and the coinage of Cleopatra VII, though the absolute chronology remains uncertain. A second-century hoard from Kom Truga, consisting of
+   125  double eagle bronzes of the type discussed by Picard, is reconstructed by SHAHIN [189].#p73FAUCHER and SHAHIN [176] publish a hoard of dated Ptolemaic bronzes
+   125  (Svoronos 1190u201391 and 1193) found near Lake Mareotis together with a bronze wing severed from a statue, but no other coins. Source: C. Lorber and A.
+   125  Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   126      "The authors demonstrate that these coins, attributed to Cyprus or Crete by Svoronos and to Syro-Phoenicia by Mu00f8rkholm, were in fact struck at
+   126  Alexandria; citing the still-unpublished Megadim shipwreck off the coast of Israel, they date the coins to the first reign of Ptolemy IX.Their die study yields
+   126  an estimate of about 70 dies for the two denominations, pointing to a substantial coinage that was probably intended to replace completely an earlier bronze
+   126  coinage withdrawn from circulation.#p74PICARD [191] reports some salient features of the assemblage of Ptolemaic coins found in the French excavations at
+   126  Alexandria. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   127      "The excavations did not yield countermarked coins, an indication that this method of revalidation was not employed at Alexandria. (Countermarked coins have
+   127  subsequently been found in the Alexandria excavations.) Cast coins are represented for all periods, but especially for the late second to first half of the
+   127  first century, when they comprise nearly a third of the total finds.The same period also saw the use of unstruck flans in exchange and a high proportion of lead
+   127  in the alloy. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   128      "These phenomena were not observed in coins from the Tebtynis excavations and may be peculiar to Alexandria.The cast coins were probably not the products of
+   128  counterfeiters but of local authorities who needed currency to make payments.One twelfth of the Lagid coins found in the Alexandria excavations were small
+   128  bronzes with the letters Bu2014A and Ku2014u039b (Svoronos 1732u20131733).Picard considers these to be 5-drachm pieces of Cleopatra VII and associates them with
+   128  her reformed 80- and 40-drachm bronzes, which replaced double eagle coins.#p75In general remarks on the state of research into Ptolemaic coinage, DE
+   128  CALLATAu0178 [264] notes the artificiality of attributing bronze coinage by reign and advocates an approach based on hoards, excavation coins, modules, and
+   128  types. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   129      "In his view the most fruitful line of research will involve correlating actual coins with the monetary units attested in written documentation.#p76DAVESNE
+   129  [263] questions the attribution to Menelaus of the early Cypriot bronze coinage with the head of Aphrodite on the obverse, stating that the eagle on thunderbolt
+   129  reverse type was introduced when Ptolemy became king.However the eagle on thunderbolt is also the reverse type of small Egyptian bronzes in the name of
+   129  Alexander, which most specialists date to Ptolemys satrapy; Davesnes case would have been stronger had he cited the use of Ptolemys name as issuing
+   129  authority.#p77WOLF AND LORBER [287] examine an anomalous bronze coinage of Ptolemy II whose style is sometimes described as Sicilian. The die axes and border
+   129  conventions do not conform to the practice of Alexandria. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   130      "The coins in question circulated almost entirely in Sicily (see MANGANARO [239] and are control linked to the bronze coinage of Hieron II, factors that
+   130  reveal these coins to be imitative issues struck at Syracuse.The notable presence of Ptolemaic coins in Sicily is also treated by CARROCCIO [216] and PUGLISI
+   130  [249], with list of hoards].#p78ARSLAN and u00d6ZEN [169] have published a hoard of small Ptolemaic bronzes portraying Arsinoe II (as Svoronos 387), together
+   130  with new bronze varieties with the types Poseidon/trident and Apollo/cornucopiae, signed u03a0u03a4u039fu039bu0395u039c and u0392u0391u03a3 u03a0u03a4u039f,
+   130  respectively. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   131      "The hoard was found in Turkish Thrace, providing the first known context for the Arsinoe bronzes, and the authors cite the types and fabric of the other
+   131  coins to suggest an origin at Byzantium.Their attribution to Ptolemy Ceraunus is less persuasive, however, and other scholars will surely prefer a date no
+   131  earlier than the reign of Ptolemy II. (Such a reattribution has now been offered by PSOMA, Numismatic evidence on the Ptolemaic involvement in Thrace during the
+   131  Second Syrian War, AJN 20 (2008), pp. 257u2013263.)#p79The value of publishing local collections is demonstrated by ASHTON [24] and KONUK [37], who singled out
+   131  the Ptolemaic holdings of the Fethiye Museum and the Bodrum Underwater Archaeology Museum, respectively. Source: C. Lorber and A. Meadows. (2012) Review of
+   131  Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   132      "At both museums two bronze series of Ptolemy II or III, one marked by a trident and the other by a tripod, were conspicuously overrepresented.As both
+   132  collections were formed locally, it is clear that these series were minted in southwest Asia Minor in the neighborhood of Telmessus and Halicarnassus, and not
+   132  at Berytus and Ptolemais (Ake) where Svoronos had placed them. ASHTON [261] suggests Caunus as the mint of both series. Source: C. Lorber and A. Meadows. (2012)
+   132  Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   133      "Nevertheless, DAVESNE [263] expresses skepticism about the local production of these coins, emphasizing his perception that for Asia Minor the minting or
+   133  importation of Ptolemaic coinage was limited to the time of the Second and Third Syrian Wars.#p80The excavations at Ras Ibn Hani in Syria have yielded an
+   133  important concentration of Ptolemaic bronzes with a female portrait labeled Queen Berenice, paired with reverses naming King Ptolemy and showing either a
+   133  cornucopiae or an eagle. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   134      "In view of the scanty representation of this series elsewhere, LORBER [279] proposes that it was a local mintage of Ras Ibn Hani rather than the several
+   134  products of Sidon, Tyre, and Ioppe or Gaza as attributed by Svoronos.She investigates the iconography, metrology, and other aspects of the coinage to determine
+   134  whether it should be given to Ptolemy II (honoring Berenice I) or to Ptolemy III (honoring Berenice II). Source: C. Lorber and A. Meadows. (2012) Review of
+   134  Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   135      "The pattern of coin finds at Ras Ibn Hani supports the latter, established interpretation.#p81LORBER [276] identifies the last Ptolemaic bronze issue of
+   135  Tyre in a rare coin with the types Zeus Ammon/filleted club, which bears the epithet of Ptolemy V, Epiphanes, on its obverse, along with a spearhead.This
+   135  epithet first appears in demotic documents in 199, and the Tyrian bronze probably represents the earliest appearance of its Greek form. Source: C. Lorber and A.
+   135  Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   136      "The coin is evidence that Tyre remained in Ptolemaic hands until at least the seventh year of Ptolemy V and perhaps until 198.#p82LORBER [277] reaffirms
+   136  the Egyptian attribution of the rare bronze coins of Ptolemaic type issued by Antiochus IV (contra Mu00f8rkholm, who had assigned them to Cyprus).She also
+   136  examines the historical circumstances and the possible function of these coins in the context of the Sixth Syrian War.#p83In a book on the self-representation
+   136  of Ptolemy VIII [152], NADIG asserts that bronze coins with his epithet Euergetes come mainly from Cypriot finds, but he provides no specific citations, nor
+   136  does he mention that Buttrey has attributed these same bronzes to Cyrenaica on the basis of finds there (The Extramural Sanctuary of Demeter and Persephone at
+   136  Cyrene, Libya: Final Reports VI (Philadelphia, 1997)). Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   137      "Based on finds in Italy, STANNARD [252] concludes that small Ammon/Isis headdress bronzes must have been the main coin circulating in Cyrenaica in 96, when
+   137  Rome acquired the province.#p84In a footnote to a paper on Nabataean lead coinage, HOOVER [271] draws attention to late Hellenistic lead pieces from Nabataean
+   137  contexts imitating the types of Svoronos 1733, the Bu2014A pentadrachms of Cleopatra VII. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic
+   137  Numismatics, 1996-2007. ISAW Papers 2.",
+   138      "Elsewhere HOOVER [298] provides an appropriately critical response to KREUZER [272], a self-published and highly speculative reconstruction of Cleopatras
+   138  Cypriot coinage that influenced the attributions of some coin dealers.#p85Technical Matters1996-2001HAZZARD [61] discusses the numismatic evidence for the
+   138  Macedonian (as opposed to Egyptian) calendar in use in Egypt under Ptolemy V and VI, and appends a list of dated Ptolemaic coins from 193/2u2013146/5 BC.
+   138  DAVESNE [77] provides a survey of the orgainisation of the Ptolemaic mints, including the use of mint marks, magistrates marks, methods of manufacture and
+   138  die-engraving. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   139      "On this last point he discusses the problems (already noted by ASHTON [290]) presented by the so-called delta-engraver.The small delta which appears behind
+   139  the head of the portrait of Ptolemy has often been taken as an artists signature.However, this u2018signature appears to have been use for a period of fifty
+   139  years and at the mints of Alexandria, Sidon, Tyre, as well as on Cyprus.While it cannot be ruled out that this was all the activity of one prolific individual,
+   139  it begins to look unlikely. BOUYON, DEPEYROT and DESNIER [55] have argued that the central cavities that appear on Ptolemaic bronze coinage are not in fact a
+   139  technical feature of production method, but are deliberate parts of the coin design intended to identify post reform coinage. Source: C. Lorber and A. Meadows.
+   139  (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   140      "It is unclear, however, why this feature should last so long on the coinage.#p86As part of broader technical studies DE CALLATAu0178 [56], [57] and [58]
+   140  has commented briefly on the die axes of Ptolemaic coinage (always adjusted to 12h.), provided estimates for the sizes of certain coin emissions of Ptolemies
+   140  III, V, VIII, IX and X (on this question cf. DAVESNE [77], and discussed the evidence for die-engravers signatures. SCHULZE [113] re-examines the problem of the
+   140  trident countermark that appears on some early Ptolemaic bronzes, and speculates that they may be evidence of a reduction in standard that took place as part of
+   140  Philadelphus great reform in the 260s. LICHOCKA [92] too, publishing a trident-countermarked coin from the Polish excavations at Nea Paphos surveys the evidence
+   140  and possible explanations for these countermarks. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   141      "She notes that they have been reported as appearing on coins issued by Euergetes and tentatively suggests that they may have been applied by a Ptolemaic
+   141  mint in the context of the Third Syrian War (in fact one of the specimens she cites is reported as being as Sv. 993 (Crowfoot et al., Objects from Samaria
+   141  (London, 1957), p. 50) which, if correctly identified, is an issue of Ptolemy IV).Clearly a full and careful collection of the evidence is
+   141  required.#p872002-2007FAUCHERS doctoral dissertation [60] is a major contribution to the study of Ptolemaic bronze coinage, centered on production technique at
+   141  the Alexandria mint. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   142      "He reports the results of metallurgical analyses conducted at the Centre Ernst Babelon on Alexandrian and provincial bronze coins, with particular
+   142  attention to the introduction of lead into the alloy in the second century and the improved tin content under Cleopatra VII.In addition he examines every aspect
+   142  of the minting process: organization of the mint, production of dies, the function of controls and symbols, types, stylistic consistency and provision of dies
+   142  to provincial mints, production of flans and the striking process, cast coins, metrology, and size of issues. Source: C. Lorber and A. Meadows. (2012) Review of
+   142  Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   143      "Fauchers metallographic observations of the famous central cavities introduced under Ptolemy II confirm the theory of Guey and Picon that these conical
+   143  holes were added individually to each flan to hold it steady on a lathe so that it could be smoothed before striking.#p88ARIEL [54] surveys the distribution of
+   143  known flan molds, noting that Ptolemaic molds from Cyprus are typologically and technologically indistinguishable from those of Judaea. Source: C. Lorber and A.
+   143  Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   144      "He also draws attention to the curious lack of either stone or clay flan molds from Egypt, though pottery molds for forging coins have been published.#p89A
+   144  pair of dies in the Greco-Roman Museum at Alexandria, ostensibly for second-century Ptolemaic mnaiaia, are exposed as nineteenth-century forgeries by FAUCHER
+   144  [59], who warns of the danger that numismatic studies may be contaminated by false mnaiaia. PROKOPOV and MANOV [62] identify some Bulgarian counterfeits of
+   144  coins of Ptolemies II through IV.#p90In a paper relating the metrology of ancient plate to that of coinage, VICKERS [64] cites a mid-first century papyrus
+   144  inventory of three sets of silver table settings of which the first two each have a weight of 13,000 drachms, based on drachms of 3.51 and 3.55 g, respectively.
+   144  Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   145      "He speculates that the total weight of 13,000 drachms may reflect the Ptolemaic gold : silver ratio of 1 : 13, making these sets each equivalent to 1000
+   145  gold drachms, i.e., a mina of gold.#p91Portraiture, iconography, and self-representation1996-2001JOHNSON [142] discusses the gold mnaieia with portrait of
+   145  Euergetes (as Sv. 1117u20139) restating the view of Smith (Hellenistic Royal Portraits (Oxford, 1988)) that divine elements present in the design are suggestive
+   145  rather than programmtically syncretic. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   146      "He compares the suggestive arrangement of the u0398u0395u03a9u039d u0391u0394u0395u039bu03a6u03a9u039d legend on the mnaieia of Ptolemy II: theos does not
+   146  have to be read as qualifying adelphos, but can be. (On the correct identification of obverse and reverse of these issues, see the comments of LE RIDER [72], p.
+   146  12 n.15).Johnson notes that explicit divine titulature (u0398u0395u039fu03a3) is absent from documentary material (including coins) before the reign of
+   146  Philometor. SMITH himself [164] has returned to the portrait of Ptolemy III, emphasising the way in which the divine attributes accorded Ptolemy were carefully
+   146  adapted to set them in a specifically royal, not divine sphere. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers
+   146  2.",
+   147      "He contrasts the calm, impassive demeanour of the Ptolemaic portraiture with the more martial and dynamic style of other Hellenistic royal houses.The
+   147  former style he sees as distinctively Alexandrian. ASHTON [128] has used numismatic material as comparanda in her investigation of the interraction between
+   147  Greek and Egyptian traditions in Ptolemaic portrait sculpture. SALZMANN [161] has used coins to help to identify a sculptural portrait of Ptolemy I in the
+   147  Kestner Museum, Hannover. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   148      "Numismatic material features alongside portraits on gems, sealings, rings and cameos in PLANTZOS work [158] on Hellenistic gems.#p92The portrait of a
+   148  Ptolemy has in the past been identified on bronze issues of the city of Abdera in Thrace. ASHTON [127] suggests that this identification should be rejected.
+   148  SPAER [165] restates his view that the late tetradrachms of Ascalon do not feature portraits of Ptolemaic kings, but rather the immobilised portrait of
+   148  Antiochus VIII. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   149      "The appearance of the portrait of Cleopatra VII of Egypt on the citys silver he takes to be an honour paid by the city to Julius Caesar on the occasion of
+   149  his defeat of Pompey at Pharsalus in 48 BC; similarly he suggests the reappearance of the portrait in the thirties to be a civic honour for Mark Antony.Neither
+   149  interpretation is compelling, and indeed the former is ruled out, since the coin in question was issued in 50/49 BC, not 48.#p93The portraiture of Cleopatra
+   149  continues to fascinate. FLEISCHER [138] analyses the schizophrenic nature of her numismatic portraits. Source: C. Lorber and A. Meadows. (2012) Review of
+   149  Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   150      "Numismatic material plays and important part in discussions in WALKER, HIGGS [50], [51].#p94Outside of Egypt, numismatic evidence has been exploited by
+   150  scholars seeking to demonstrate links between Ptolemaic Egypt and the West. TALIERCIO MENSITIERI [115] collects the evidence for Ptolemaic coin finds and
+   150  stylistic influence in Bruttium and at Rome and in Campania. TRAVAGLINI [256] collects the evidence for Ptolemaic coin finds in Puglia, while GARRAFFO [81]
+   150  notes a close stylistic correspondence between the coinage of Agathocles of Syracuse and contemporary issues of Ptolemy He goes on to identify, on the basis of
+   150  metrological study, a close relationship between the weight standard adopted by Hieron II of Syracuse and the Ptolemaic standard in the latter half of the third
+   150  century. CACCAMO CALTABIANO [71] also notes metrological similarities and uses what she regards as stylistic derivation to date the coinage of Philistis after
+   150  the Ptolemaic issues of Berenice that they copy. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   151      "MEADOWS [102] has suggested, albeit speculatively, the possibility that Ptolemaic influence is to be seen in the choice of the Mars/Eagle on thunderbolt
+   151  gold produced by Rome during the Second Punic War.#p952002-2007Three themes dominated recent studies of the iconography of Ptolemaic coins: the interpretation
+   151  of divine attributes associated with the rulers, the representation of Ptolemaic queens, and the influence of Egyptian culture on royal
+   151  self-representation.#p96Several authors treat the depictions of Alexander the Great on the coinage of early Hellenistic Egypt. Source: C. Lorber and A. Meadows.
+   151  (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   152      "There is disagreement over the small Egyptian bronzes showing a male head in Phrygian cap, with the reverse type of a Pegasus forepart. LE RIDER [273]
+   152  argues that the obverse cannot represent Alexander and that the coins may not even be Egyptian. DAHMEN [136] accepts the image as a lifetime portrait, but
+   152  admits that its satrapal attributes are difficult to account for.He stresses the originality and the essentially transitional character of Ptolemys posthumous
+   152  portraits of Alexander, which project the conquerors divine nature in order to legitimize Ptolemys rule. Source: C. Lorber and A. Meadows. (2012) Review of
+   152  Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   153      "The bronze coinage initially showed Alexander without the elephant headdress, so that his horn, signifying his relation to Zeus Ammon and thus his
+   153  connection to Egypt, was more immediately apparent to the local population that used these coins. PFROMMER [156] anachronistically cites a late myth that Osiris
+   153  hunted elephants in India to explain Alexander elephant headdress. BOSWORTH [132] interprets the figure of Alexander in an elephant quadriga on Ptolemys gold
+   153  staters, drawing attention to episodes in Alexanders campaign that associate elephants with Indian kingship. Source: C. Lorber and A. Meadows. (2012) Review of
+   153  Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   154      "He emphasizes Ptolemys role in promoting elephant imagery and speculates that for Ptolemy elephants were symbols of great power defeated, whereas Seleucus
+   154  made them symbols of his own victory at Ipsus, trumping Ptolemys use of elephant imagery and effectively driving it from his coinage.#p97KROLL [144] offers the
+   154  premise that Hellenistic royal portraits with divine attributes grew out of a Greek tradition that reserved coin obverses for representations of gods. Source:
+   154  C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   155      "After tracing the development of the coin types of Ptolemy I, he notes that the Zeus imagery of Ptolemys final precious metal coinage relates his coin
+   155  portrait to his epithet Soter, received from the Rhodians in 304 (a point of history that has been disputed by HAZZARD, Did Ptolemy I get his surname from the
+   155  Rhodians in 304? ZPE 93 (1992), pp. 52u201356).Kroll submits that coin portraits of living Ptolemaic rulers without divine attributes appear only in territories
+   155  outside Egypt and reflect Seleucid influence in these areas (Cilicia and Coele Syria).#p98The numismatic papers from the Fifth International Italo-Egyptian
+   155  Conference at Turin look for Egyptian influence on Ptolemaic coin types. LICHOCKA [147] observes how the lack of Egyptian precedents for numismatic artistry
+   155  resulted in a coinage of Greek style that often conveyed Egyptian ideas. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007.
+   155  ISAW Papers 2.",
+   156      "Its repetitive iconography and legends underlined the continuity of power. CALABRIA [135] cites the ancient Egyptian tradition that reserved precious
+   156  metals, especially gold, for the pharaoh and notes the implications for royal portraits on coinage; the absence of such a tradition in Cyrenaica allowed Magas
+   156  to place royal portraits on bronze coinage.Jugate portraits of the royal couple on Egyptian mnaieia and in other media such as cameos likened the rulers to
+   156  Osiris and Isis and drew on the pharaonic tradition of the great royal wife, a divine spouse capable of giving birth to the next pharaoh. Source: C. Lorber and
+   156  A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   157      "The coinage of Cleopatra VII broke with both of these traditions, portraying Cleopatra as sole ruler, principally on bronze coinage. FINOCCHI [135]
+   157  considers the numismatic portraiture of Ptolemaic queens against the background of female pharaohs.She endorses La Roccas conclusion that portrayal of a queen
+   157  diademed but otherwise bare headed was a sign of her real and legal exercise of power, a standard met only by Berenice II and Cleopatra VII; however Finocchis
+   157  own discussion of the Cyrenaican portrait coins of Magas for Berenice I provides a counterexample.#p99Seeking the origin of female ruler portraiture, GORINI
+   157  [139] credits Lysimachus with the first such depictions on coins: the portraits of his wife Arsinoe (the future Arsinoe II) and his daughter Eurydice on coins
+   157  of Ephesus and Smyrna, respectively. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   158      "For Gorini, the Cyrenaican coins issued by Magas in the name of Queen Berenice depict two different queens, those with young portraits representing
+   158  Berenice I and those with older portraits Berenice II.Also noteworthy are Gorinis attribution to Cyrenaica of high value precious metal coins of Berenice II
+   158  usually ascribed to Egypt and his date of 262 for certain mnaieia of Berenice II struck at Ephesus. PARENTE [155] examines the numismatic iconography of Arsinoe
+   158  Philadelphus. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   159      "Like Gorini, she identifies the earliest numismatic portraits of Arsinoe on the coins of Arsinoe-Ephesus.Arsinoes veil represents her married status.Her
+   159  Egyptian coins depict her with the horn of Ammon, reflecting her epithet daughter of Ammon. Of particular interest is the complex symbolism of the pomegranates
+   159  in the dikeras, which evoke love, marriage, fertility, and life after death and thus associate the deified queen with Hera, Aphrodite, Persephone, and Isis. VON
+   159  REDEN [149] sees the fruits in the dikeras as Dionysiac. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   160      "She recalls an Egyptian myth that Zeus fathered Dionysus on Amaltheia (source of the horn) and then named the place of their lovemaking, a fertile region
+   160  shaped like a bulls horn, Amaltheias keras.For PFROMMER [156], the fundamental horn shape of the double cornucopiae recalls Io, a divine forerunner of the
+   160  refugee Arsinoe, while the dikeras itself symbolizes the sacred marriage of the Theoi Adelphoi and serves to mitigate the scandal of the incestuous union.
+   160  Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   161      "In a paper on Ptolemaic incest, AGER [126] deals in part with tryphu00e9 and with coin types expressing it; she suggests that the double cornucopiae of
+   161  Arsinoe Philadelphus might symbolize incest as well as tryphu00e9.Regarding the Berenikeia nomismata, PFROMMER [156] shares the opinion of many scholars that it
+   161  was issued during the Third Syrian War and is an expression of Berenices full sovereignty during the kings absence on campaign. Source: C. Lorber and A.
+   161  Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   162      "The youthful, idealized portrait on the mnaieia struck at Ephesus is, in Pfrommers view, a likeness of Berenice Syra, designed to conceal her death and to
+   162  legitimize Ptolemys aggression through the fiction that he was acting on her behalf.#p100BRICAULT [145] relates the tetradrachms of Ptolemy IV portraying
+   162  Sarapis and Isis to inscriptions from Philopators reign attesting to a cult of this divine couple as Savior Gods. Source: C. Lorber and A. Meadows. (2012)
+   162  Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   163      "The author hypothesizes that the king may have credited the Savior Gods with a battlefield intervention that led to his unexpected victory at Raphia, in
+   163  which case the coins should be dated to the time of the battle of Raphia.Less credibly, Bricault claims that the atef crown of Sarapis marked his official
+   163  consecration by the religious authorities at Memphis (in fact, Sarapis was a Hellenized version of the Memphite god Osorapis) and that the temporary elimination
+   163  of Amun led to the Theban revolt (Zeus-Ammon was consistently portrayed on the bronze coinage of Ptolemy IV).#p101In a major study of solar imagery in ruler
+   163  portraits, BERGMANN [130] discusses the propaganda purposes of radiate portraits of Ptolemy III and V in the context of the Fourth and Fifth Syrian Wars.
+   163  Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   164      "She generally follows Kyrieleis in interpreting the iconography of Ptolemy III as pantheistic and as symbolizing power over land and sea, success in the
+   164  Third Syrian War, and the fertility of Egypt.She associates the coins portraying the deified Ptolemy III with the donative promised by Arsinoe III before the
+   164  battle of Raphia and recorded in the Raphia Decree.The war propaganda of Ptolemy V included portraits of his parents because they were victors over Antiochus
+   164  III at Raphia. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   165      "Bergmann develops the idea that radiate portraiture was transmitted from the Ptolemies to the Seleucids via the Syrian Wars, but notes that Persian sources
+   165  could also have inspired the astral symbolism of Antiochus IV. BLASIUS [131] also emphasizes the interchange between the Ptolemies and the Seleucids, tracing
+   165  the epithets of Antiochus IV as well as his solar imagery to the example of his brother-in-law Ptolemy The Egyptianizing bronze coinage of Antiochus IV borrowed
+   165  its types and metrology from Ptolemaic coinage and for Blasius it is best explained as a coinage struck at Antioch for use by the Seleucid army during its two
+   165  invasions of Egypt. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   166      "To explain the absence of these coins in Egypt, he points to the removal of Ptolemaic u0395u03a5u039b bronzes from Cyprus when the Seleucid occupation
+   166  ended.#p102Publication of an Edfu seal impression with the portrait of Antiochus IV of Syria leads PLANTZOS [159] to a discussion of the coin portraits of
+   166  Ptolemy VI.Both the unique tetradrachm in the American Numismatic Society and the unique mnaieion of Cleopatra I and Ptolemy VI in the British Museum are cited,
+   166  without reference to HAZZARDS identification of Ptolemy V on the New York tetradrachm (Theos Epiphanes: Crisis and response, Harvard Theological Review 88/4
+   166  (October 1995), pp. 415u2013436).#p103THOMAS [166] has published a bronze statuette in a Rhenish private collection, identifying it as a posthumous
+   166  representation of Ptolemy IV in the guise of Osiris. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   167      "Her analysis entails a wide-ranging survey of the documentation for the assimilation of kings to gods, drawing heavily on coin imagery, with special
+   167  emphasis on the Ptolemies.She concludes that portrayals of Ptolemaic kings with divine attributes represent them in their role as pharaohs. A table at the back
+   167  of the book presents a chronological overview of all Hellenistic coins bearing ruler portraits with divine attributes, with columns summarizing Thomas thoughts
+   167  as to the significance of the attributes and the occasion of issue. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW
+   167  Papers 2.",
+   168      "It is regrettable that there is not also a column for numismatic references, as the coin varieties are not always clearly recognizable.The Rhenish
+   168  statuette is revisited by HUu00df [140], who notes grain ears in its crown.He cites tetradrachms of Ptolemy V with a grain ear on his diadem as evidence that
+   168  the young king was identified with Triptolemus and probably with his Egyptian equivalent Harpocrates. Source: C. Lorber and A. Meadows. (2012) Review of
+   168  Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   169      "For Huu00df, the statue more likely represents Ptolemy V in the guise of Harpocrates.#p104NADIG [152] compares the rare numismatic portraits of Ptolemy
+   169  VIII with the radiate portraits of Ptolemy III and Ptolemy V, concluding that Euergetes II adopted the radiate aureole and the eagle with sceptre reverse to
+   169  recall his father and also to advertise himself as benefactor and paymaster to the soldiery after the attempted usurpation by Galaestes two years earlier.
+   169  Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   170      "The discussion does not mention that Euergetes II struck his portrait coins on Cyprus.The snakes of the aegis are misread as a double wreath on the kings
+   170  neck, following ASHTON (Ptolemaic Royal Sculpture from Egypt (Oxford, 2001), p. 59).#p105A study of the Egyptian pictorial elements in the Ptolemaic seal
+   170  impressions from Nea Paphos prompts KYRIELEIS [145] to comment on various symbols that also occur as subsidiary symbols on coins. Source: C. Lorber and A.
+   170  Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   171      "Among his more interesting suggestions: symbols of the Dioscuri appear on coins intended for the military, but since the Dioscuri were Theoi Soteres, their
+   171  symbols could also refer to the Theoi Soteres in royal cult, either Cleopatra III and Ptolemy IX or Cleopatra III and Ptolemy #p106Several elements of Ptolemaic
+   171  coin iconography have received separate study. MARITZ [148] analyzes the elephant exuviae on Ptolemaic and other coinages. Source: C. Lorber and A. Meadows.
+   171  (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   172      "The gold staters of Agathocles, which imitate silver tetradrachms of his father-in-law Ptolemy, must portray Alexander rather than a personification of
+   172  Africa, and later Ptolemaic bronze coins with the elephant headdress may also be ruler portraits. MASTROCINQUE [149] recalls the myth of the infant Zeus
+   172  nurtured by the goat Amaltheia, submits that this creates a link between Zeus and the cornucopiae, and suggests that Ptolemaic coins associating the eagle with
+   172  either a cornucopiae or a shield could allude to the early Ptolemaic court myth that the infant Ptolemy was exposed on a shield and nourished by an eagle sent
+   172  by Zeus. MEYBOOM [150] forges a chain of equivalences involving the benu bird, the phoenix, and Osiris to support a theory that the eagle on Ptolemaic coins
+   172  symbolizes the king as Lord of the Flood and thus the source of Egypts prosperity and well being. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic
+   172  Numismatics, 1996-2007. ISAW Papers 2.",
+   173      "This significance is especially clear, he alleges, when the eagle is accompanied by a cornucopiae or lotus bud symbol.The prominent association of
+   173  cornucopiae and eagle on tetradrachms and bronze coins of Ptolemy III may lend a kind of support to Meybooms idea that the eagle might allude to the phoenix
+   173  that appeared at Heliopolis in 238, announcing the beginning of a new Sothis cycle.This connection cannot be valid in general, however, because the Ptolemaic
+   173  eagle was introduced to the coinage during the satrapy of Ptolemy I, some eighty years before the appearance of the phoenix. Source: C. Lorber and A. Meadows.
+   173  (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   174      "Similarly the significance attributed to the lotus blossom is a little suspect, as it is now recognized as a mintmark of Cyprus (LORBER, The Lotus of
+   174  Aphrodite on Ptolemaic Bronzes, SNR 80 (2001), pp. 39u201352). PINCOCK [157] defends the old theory that Ptolemaic reverse types depicting two eagles signify
+   174  coregencies.#p107As always, coins serve as important comparanda in the study of Ptolemaic portraits in other media. LARONDE [146] identifies a portrait head of
+   174  Ptolemy III from Apollonia in Cyrenaica, citing that kings bronze portrait coins and the tetradrachm Svoronos 996 from the Sophikon hoard. Source: C. Lorber and
+   174  A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   175      "This identification must be treated with caution because of the perfunctory artistic quality of the bronze coins cited and especially because the Sophikon
+   175  tetradrachm may well represent Ptolemy II rather than Ptolemy III, based on its iconographic similarity to the Tarsian tetradrachms reattributed from Euergetes
+   175  to Philadelphus by DAVESNE (La Deuxiu00e8me Guerre de Syrie (ca. 261u2013255 avant ) et les tu00e9moignages numismatiques, in Amandry and Hurter, eds., Travaux
+   175  de numismatique grecque offerts u00e0 Georges Le Rider (London, 1999), pp. 129u2013131). PALAGIA [153] identifies a marble head with wings in the Sparta Museum
+   175  as a portrait of Ptolemy III assimilated to Hermes. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   176      "As supporting evidence she mentions, inter alia, bronze coins of Abdera that may portray the winged head of a Ptolemy and second-century bronze coins of
+   176  Marathus allegedly showing Ptolemy III with a caduceus over his shoulder.That the Abderite coins portray a Ptolemy has been questioned most recently by
+   176  CHRYSSANTHAKI [217], who asserts that Abdera lay outside the area of Ptolemaic control, identifies the winged head as Perseus, and dates the coins to the time
+   176  of Philip The evidentiary value of the Marathus bronzes is also dubious. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007.
+   176  ISAW Papers 2.",
+   177      "In her monographic study of Aradus and its peraia [266], DUYRAT emphasizes the strong ties of loyalty to the Seleucids despite formal autonomy, and
+   177  elsewhere she has described the Marathian coin type simply as Hermes (Les ateliers monu00e9taires de Phu00e9nicie du Nord u00e0 lu00e9poque hellu00e9nistique,
+   177  in Augu00e9 and Duyrat, eds., Les monnayages syriens: Quel apport pour lhistoire du Proche-Orient hellu00e9nistique et romain? (Beirut, 2002), pp. 30, 32).
+   177  Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   178      "In a separate study identifying portrait heads of Berenice II [154], PALAGIA takes a critical view of numismatic evidence, arguing that coin portraits
+   178  showing the queen with the melon coiffure do not preclude other hairstyles in sculpture, especially if Berenice is portrayed in the guise of a goddess such as
+   178  Isis or Aphrodite. ASHTON [151] briefly mentions the coin portraits of Ptolemy VI in connection with the possibility of shared sources for statues of Ptolemy VI
+   178  in Egyptian and Greek style. JOHANSEN [141] emphasizes the value of coins as a source for the iconography of Cleopatra VII and contrasts the style of her
+   178  portraits on denarii and tetradrachms (where Antony is described, wrongly, as occupying the obverse). FERROUKHI [137] uses coins of Cleopatra VII and Cleopatra
+   178  Selene as comparanda in identifying portraits in the round but submits that sculptural style trumps comparisons with numismatic iconography, concluding that one
+   178  of the Cherchell heads found at Caesarea, Mauretania, must depict Cleopatra Selene rather than Cleopatra VII.#p108Several studies treat royal titles and coin
+   178  legends, another aspect of Lagid self-representation. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic Numismatics, 1996-2007. ISAW Papers 2.",
+   179      "JOHNSON [143] argues that OGIS 98, a dedication of Ptolemy V and Cleopatra I to Asclepius from Philae, is the first use of a divine epiklesis in an
+   179  official Ptolemaic document.He asserts that the first four Ptolemies consistently avoided the use of divine titles in papyri, inscriptions, and coin legends.The
+   179  epithet Thea Neotera, which appears on coinage of Cleopatra VII and Mark Antony, is the subject of a study by MUCCIOLI [151], who dates its introduction c. 43/2
+   179  and relates it to the identification of Cleopatra with Aphrodite. WILLIAMS [153] also gives considerable attention to the legends of Cleopatra and Antonys
+   179  coinage in a study that analyzes the mix of Hellenistic and Roman aspects of that coinage. Source: C. Lorber and A. Meadows. (2012) Review of Ptolemaic
+   179  Numismatics, 1996-2007. ISAW Papers 2."
+   180  ]
+----- END .\data\chunks\isaw2.txt -----
+
+----- BEGIN .\export_audit.ps1 -----
+     1  # export_audit.ps1
+     2  # Writes a directory overview + selected file contents to audit_clean.txt
+     3  
+     4  $OutFile   = "audit_clean.txt"
+     5  $MaxBytes  = 200KB          # change if you want a different cap
+     6  $WrapWidth = 160
+     7  
+     8  # Folders to ignore anywhere in the tree
+     9  $excludeDirPattern = '\\(\.git|node_modules|__pycache__|\.venv|\.ipynb_checkpoints|logs|import|plugins)(\\|$)'
+    10  
+    11  # Specific big-data subtrees you want ignored completely (add more if needed)
+    12  $excludeRoots = @(
+    13    '\data\pleiades',      # your large Pleiades dump
+    14    '\data\raw',
+    15    '\data\cache'
+    16  )
+    17  
+    18  # File types to include in the "contents" section
+    19  $includeExt = @(
+    20    '.ps1','.psm1','.bat','.cmd',
+    21    '.py','.php','.js','.ts',
+    22    '.json','.md','.txt',
+    23    '.html','.htm',
+    24    '.yml','.yaml','.ini','.cfg'
+    25  )
+    26  
+    27  # --- helpers ---------------------------------------------------------------
+    28  
+    29  function Add-Line([string]$s='') {
+    30    $s | Out-File -Encoding utf8 -FilePath $OutFile -Append
+    31  }
+    32  
+    33  function Is-ExcludedPath([string]$fullPath) {
+    34    if ($fullPath -match $excludeDirPattern) { return $true }
+    35    foreach ($root in $excludeRoots) {
+    36      if ($fullPath.ToLower().Contains($root.ToLower())) { return $true }
+    37    }
+    38    return $false
+    39  }
+    40  
+    41  function RelPath([string]$fullPath) {
+    42    $root = (Get-Location).Path
+    43    if ($fullPath.StartsWith($root)) { return ".\" + $fullPath.Substring($root.Length + 1) }
+    44    return $fullPath
+    45  }
+    46  
+    47  function Wrap-Line([string]$line, [int]$width) {
+    48    if ([string]::IsNullOrEmpty($line)) { return @('') }
+    49    # soft wrap on whitespace up to $width
+    50    return [regex]::Matches($line, "(.{1,$width})(\s+|$)") | ForEach-Object { $_.Groups[1].Value }
+    51  }
+    52  
+    53  function Dump-File([IO.FileInfo]$f) {
+    54    $rel = RelPath $f.FullName
+    55    if ($f.Length -gt $MaxBytes) {
+    56      Add-Line ""
+    57      Add-Line "----- SKIP (too large) $rel ($($f.Length) bytes) -----"
+    58      return
+    59    }
+    60  
+    61    Add-Line ""
+    62    Add-Line "----- BEGIN $rel -----"
+    63  
+    64    $text =
+    65      if ($f.Extension -in @('.html','.htm')) {
+    66        # strip giant data URIs; keep text readable
+    67        (Get-Content -Raw -Encoding UTF8 $f.FullName) `
+    68          -replace 'data:(?:image|font|application)/[a-zA-Z0-9.\+\-]+;base64,[A-Za-z0-9+/=\s]+' ,'[[data-uri-stripped]]'
+    69      } else {
+    70        Get-Content -Raw -Encoding UTF8 $f.FullName
+    71      }
+    72  
+    73    $i = 1
+    74    foreach ($ln in ($text -split "`r?`n")) {
+    75      foreach ($w in (Wrap-Line $ln $WrapWidth)) {
+    76        Add-Line ("{0,6}  {1}" -f $i, $w)
+    77      }
+    78      $i++
+    79    }
+    80  
+    81    Add-Line "----- END $rel -----"
+    82  }
+    83  
+    84  # --- start fresh -----------------------------------------------------------
+    85  Remove-Item -ErrorAction Ignore $OutFile
+    86  
+    87  # --- Directory overview ----------------------------------------------------
+    88  Add-Line "=== Directory Structure Overview ==="
+    89  # build a simple tree (directories first, then files), excluding junk
+    90  $items = Get-ChildItem -Recurse -Force | Where-Object {
+    91    -not (Is-ExcludedPath $_.FullName)
+    92  }
+    93  
+    94  # group by directory depth for pretty printing
+    95  $rootPath   = (Get-Location).Path
+    96  $itemsDirs  = $items | Where-Object { $_.PSIsContainer } | Sort-Object FullName
+    97  $itemsFiles = $items | Where-Object { -not $_.PSIsContainer } | Sort-Object FullName
+    98  
+    99  # print directories
+   100  foreach ($d in $itemsDirs) {
+   101    $rel = RelPath $d.FullName
+   102    $depth = ($rel -split '[\\/]').Count - 1
+   103    $indent = ('|   ' * ($depth - 1)) + (if ($depth -gt 0) {'|-- '} else {''})
+   104    Add-Line ($indent + $rel)
+   105  }
+   106  # print files
+   107  foreach ($f in $itemsFiles) {
+   108    $rel = RelPath $f.FullName
+   109    $depth = ($rel -split '[\\/]').Count - 1
+   110    $indent = ('|   ' * ($depth - 1)) + (if ($depth -gt 0) {'|-- '} else {''})
+   111    Add-Line ($indent + $rel)
+   112  }
+   113  
+   114  # --- File contents ---------------------------------------------------------
+   115  Add-Line ""
+   116  Add-Line "=== File Contents (filtered, readable) ==="
+   117  
+   118  $filesToDump = Get-ChildItem -Recurse -File -Force |
+   119    Where-Object {
+   120      -not (Is-ExcludedPath $_.FullName) -and
+   121      ($includeExt -contains $_.Extension.ToLower())
+   122    } |
+   123    Sort-Object FullName
+   124  
+   125  foreach ($f in $filesToDump) {
+   126    Dump-File $f
+   127  }
+   128  
+   129  Add-Line ""
+   130  Add-Line "Wrote: $OutFile"
+   131  Write-Host "Wrote: $OutFile"
+   132  
+----- END .\export_audit.ps1 -----
+
+----- BEGIN .\ingest_one_article.py -----
+     1  #!/usr/bin/env python3
+     2  # -*- coding: utf-8 -*-
+     3  
+     4  """
+     5  ingest_one_article.py
+     6  
+     7  Reads:
+     8    - JSONL of chunks
+     9    - metadata JSON for the article
+    10  Embeds chunks, creates Article/Chunk/Person/Concept nodes and relations in Neo4j.
+    11  
+    12  Secrets/config:
+    13    - Create a .env file in the project root (NOT committed) with:
+    14        NEO4J_URI=bolt://localhost:7687
+    15        NEO4J_USER=neo4j
+    16        NEO4J_PASSWORD=...         # REQUIRED
+    17        NEO4J_DATABASE=graphrag     # optional
+    18  Install once:
+    19    pip install python-dotenv neo4j tqdm spacy sentence-transformers
+    20    python -m spacy download en_core_web_sm
+    21  """
+    22  
+    23  import json
+    24  import os
+    25  from pathlib import Path
+    26  from typing import List, Dict, Any, Tuple
+    27  
+    28  # Load .env BEFORE anything uses env vars
+    29  try:
+    30      from dotenv import load_dotenv
+    31      load_dotenv()  # loads .env from current working directory or parents
+    32  except Exception:
+    33      # If python-dotenv isn't installed, we just proceed (env can still be set by OS)
+    34      pass
+    35  
+    36  from neo4j import GraphDatabase
+    37  from tqdm import tqdm
+    38  
+    39  import spacy
+    40  from sentence_transformers import SentenceTransformer
+    41  
+    42  # -----------------------------
+    43  # Static file locations (adjust if needed)
+    44  # -----------------------------
+    45  CONFIG = {
+    46      "JSONL_PATH": r"C:\Users\feder\Desktop\GraphRag\data\chunks\isaw2.jsonl",
+    47      "META_PATH":  r"C:\Users\feder\Desktop\GraphRag\data\articles\isaw-papers-2-2012.meta.json",
+    48      "EMBED_MODEL": "sentence-transformers/all-MiniLM-L6-v2",
+    49  }
+    50  
+    51  # -----------------------------
+    52  # Secrets & connection from env
+    53  # -----------------------------
+    54  NEO4J_URI = os.getenv("NEO4J_URI", "bolt://localhost:7687")
+    55  NEO4J_USER = os.getenv("NEO4J_USER", "neo4j")
+    56  # Accept either NEO4J_PASSWORD or NEO4J_PASS
+    57  NEO4J_PASS = os.getenv("NEO4J_PASSWORD") or os.getenv("NEO4J_PASS")
+    58  NEO4J_DATABASE = os.getenv("NEO4J_DATABASE", "graphrag")
+    59  
+    60  if not NEO4J_PASS:
+    61      raise SystemExit(
+    62          "Missing Neo4j password. Set NEO4J_PASSWORD in a local .env file or as an environment variable."
+    63      )
+    64  
+    65  CONCEPT_ALLOWLIST = {"Terms", "Exaltations", "Triplicities", "Houses", "Decans"}
+    66  
+    67  
+    68  def read_jsonl(path: Path) -> List[Dict[str, Any]]:
+    69      rows = []
+    70      with path.open("r", encoding="utf-8") as f:
+    71          for line in f:
+    72              line = line.strip()
+    73              if line:
+    74                  rows.append(json.loads(line))
+    75      return rows
+    76  
+    77  
+    78  def load_meta(path: Path) -> Dict[str, Any]:
+    79      return json.loads(path.read_text(encoding="utf-8"))
+    80  
+    81  
+    82  def build_next_pairs(chunks: List[Dict[str, Any]]) -> List[Tuple[str, str]]:
+    83      s = sorted(chunks, key=lambda x: x["seq"])
+    84      return [(s[i]["chunkId"], s[i + 1]["chunkId"]) for i in range(len(s) - 1)]
+    85  
+    86  
+    87  def extract_mentions(nlp, text: str) -> Dict[str, List[str]]:
+    88      doc = nlp(text)
+    89      persons = sorted({
+    90          ent.text.strip()
+    91          for ent in doc.ents
+    92          if ent.label_ == "PERSON" and len(ent.text.strip()) >= 2
+    93      })
+    94      concepts = sorted({c for c in CONCEPT_ALLOWLIST if c.lower() in text.lower()})
+    95      return {"persons": persons, "concepts": concepts}
+    96  
+    97  
+    98  # ---------- Cypher ----------
+    99  CYPHER_MERGE_ARTICLE = """
+   100  MERGE (a:Article {articleId: $articleId})
+   101  SET a.title = $title, a.year = $year, a.journal = $journal, a.url = $url
+   102  """
+   103  
+   104  CYPHER_MERGE_CHUNK = """
+   105  MERGE (c:Chunk {chunkId: $chunkId})
+   106  SET c.seq = $seq, c.text = $text, c.textEmbedding = $embedding
+   107  """
+   108  
+   109  CYPHER_REL_HAS_CHUNK = """
+   110  MATCH (a:Article {articleId: $articleId}), (c:Chunk {chunkId: $chunkId})
+   111  MERGE (a)-[:HAS_CHUNK]->(c)
+   112  MERGE (c)-[:PART_OF]->(a)
+   113  """
+   114  
+   115  CYPHER_REL_NEXT = """
+   116  MATCH (c1:Chunk {chunkId: $c1}), (c2:Chunk {chunkId: $c2})
+   117  MERGE (c1)-[:NEXT]->(c2)
+   118  """
+   119  
+   120  CYPHER_MERGE_PERSON = """
+   121  MERGE (p:Person {name: $name})
+   122  ON CREATE SET p.aliases = COALESCE($aliases, []),
+   123                p.orcid = $orcid, p.wikidataId = $wikidataId,
+   124                p.birth = $birth, p.death = $death
+   125  """
+   126  
+   127  CYPHER_REL_AUTHORED = """
+   128  MATCH (p:Person {name: $name}), (a:Article {articleId: $articleId})
+   129  MERGE (p)-[r:AUTHORED]->(a)
+   130  ON CREATE SET r.`order` = $order, r.role = $role, r.corresponding = $corresponding
+   131  """
+   132  
+   133  CYPHER_MERGE_CONCEPT = "MERGE (k:Concept {name: $name})"
+   134  CYPHER_REL_MENTIONS_PERSON = """
+   135  MATCH (c:Chunk {chunkId: $chunkId}), (p:Person {name: $name})
+   136  MERGE (c)-[:MENTIONS]->(p)
+   137  """
+   138  CYPHER_REL_MENTIONS_CONCEPT = """
+   139  MATCH (c:Chunk {chunkId: $chunkId}), (k:Concept {name: $name})
+   140  MERGE (c)-[:MENTIONS]->(k)
+   141  """
+   142  
+   143  
+   144  def ingest(uri, user, password, database, chunks, meta, embedder, nlp):
+   145      driver = GraphDatabase.driver(uri, auth=(user, password))
+   146      article_id = meta["articleId"]
+   147      with driver.session(database=database) as session:
+   148          # Article
+   149          session.run(
+   150              CYPHER_MERGE_ARTICLE,
+   151              articleId=article_id,
+   152              title=meta.get("title"),
+   153              year=meta.get("year"),
+   154              journal=meta.get("journal"),
+   155              url=meta.get("url"),
+   156          )
+   157  
+   158          # Authors
+   159          for a in meta.get("authors", []):
+   160              session.run(
+   161                  CYPHER_MERGE_PERSON,
+   162                  name=a["name"],
+   163                  aliases=a.get("aliases"),
+   164                  orcid=a.get("orcid"),
+   165                  wikidataId=a.get("wikidataId"),
+   166                  birth=a.get("birth"),
+   167                  death=a.get("death"),
+   168              )
+   169              session.run(
+   170                  CYPHER_REL_AUTHORED,
+   171                  name=a["name"],
+   172                  articleId=article_id,
+   173                  order=a.get("order"),
+   174                  role=a.get("role", "author"),
+   175                  corresponding=bool(a.get("corresponding", False)),
+   176              )
+   177  
+   178          # Chunks + embeddings + mentions
+   179          texts = [c["text"] for c in chunks]
+   180          embeddings = embedder.encode(texts, show_progress_bar=True, normalize_embeddings=True)
+   181  
+   182          for c, emb in tqdm(zip(chunks, embeddings), total=len(chunks), desc="Inserting chunks"):
+   183              session.run(
+   184                  CYPHER_MERGE_CHUNK,
+   185                  chunkId=c["chunkId"],
+   186                  seq=c["seq"],
+   187                  text=c["text"],
+   188                  embedding=[float(x) for x in emb],  # Neo4j supports list<float>
+   189              )
+   190              session.run(CYPHER_REL_HAS_CHUNK, articleId=article_id, chunkId=c["chunkId"])
+   191  
+   192              m = extract_mentions(nlp, c["text"])
+   193              for person_name in m["persons"]:
+   194                  session.run(
+   195                      CYPHER_MERGE_PERSON,
+   196                      name=person_name,
+   197                      aliases=None,
+   198                      orcid=None,
+   199                      wikidataId=None,
+   200                      birth=None,
+   201                      death=None,
+   202                  )
+   203                  session.run(CYPHER_REL_MENTIONS_PERSON, chunkId=c["chunkId"], name=person_name)
+   204  
+   205              for concept_name in m["concepts"]:
+   206                  session.run(CYPHER_MERGE_CONCEPT, name=concept_name)
+   207                  session.run(CYPHER_REL_MENTIONS_CONCEPT, chunkId=c["chunkId"], name=concept_name)
+   208  
+   209          # NEXT chain
+   210          for c1, c2 in build_next_pairs(chunks):
+   211              session.run(CYPHER_REL_NEXT, c1=c1, c2=c2)
+   212  
+   213      driver.close()
+   214  
+   215  
+   216  def main():
+   217      jsonl_path = Path(CONFIG["JSONL_PATH"])
+   218      meta_path = Path(CONFIG["META_PATH"])
+   219  
+   220      if not jsonl_path.exists():
+   221          raise SystemExit(f"Missing chunks file: {jsonl_path}")
+   222      if not meta_path.exists():
+   223          raise SystemExit(f"Missing meta file:   {meta_path}")
+   224  
+   225      chunks = read_jsonl(jsonl_path)
+   226      meta = load_meta(meta_path)
+   227  
+   228      if {c["articleId"] for c in chunks} != {meta["articleId"]}:
+   229          raise SystemExit("ArticleId mismatch between chunks and meta")
+   230  
+   231      print(f"Loaded {len(chunks)} chunks for article {meta['articleId']}")
+   232      print("Loading embedder:", CONFIG["EMBED_MODEL"])
+   233      embedder = SentenceTransformer(CONFIG["EMBED_MODEL"])
+   234  
+   235      # spaCy model (auto-install if missing)
+   236      try:
+   237          nlp = spacy.load("en_core_web_sm")
+   238      except OSError:
+   239          import subprocess, sys
+   240          subprocess.check_call([sys.executable, "-m", "spacy", "download", "en_core_web_sm"])
+   241          nlp = spacy.load("en_core_web_sm")
+   242  
+   243      ingest(
+   244          NEO4J_URI,
+   245          NEO4J_USER,
+   246          NEO4J_PASS,
+   247          NEO4J_DATABASE,
+   248          chunks,
+   249          meta,
+   250          embedder,
+   251          nlp,
+   252      )
+   253      print("Done.")
+   254  
+   255  
+   256  if __name__ == "__main__":
+   257      main()
+   258  
+----- END .\ingest_one_article.py -----
+
+----- BEGIN .\ingest_pleiades.py -----
+     1  #!/usr/bin/env python3
+     2  # -*- coding: utf-8 -*-
+     3  
+     4  import os, json, gzip, re
+     5  from pathlib import Path
+     6  from typing import Dict, Any, List, Optional, Tuple
+     7  from neo4j import GraphDatabase
+     8  import ijson
+     9  
+    10  # ------------ Config via env ------------
+    11  NEO4J_URI  = os.getenv("NEO4J_URI",  "bolt://localhost:7687")
+    12  NEO4J_USER = os.getenv("NEO4J_USER", "neo4j")
+    13  NEO4J_PASS = os.getenv("NEO4J_PASSWORD") or os.getenv("NEO4J_PASS")
+    14  NEO4J_DB   = os.getenv("NEO4J_DATABASE", "graphrag")
+    15  
+    16  # Path to pleiades-places-latest.json[.gz]
+    17  PLEIADES_JSON = os.getenv(
+    18      "PLEIADES_JSON",
+    19      r"C:\Users\feder\Desktop\GraphRag\data\pleiades\pleiades-places-latest.json.gz"
+    20  )
+    21  
+    22  # ------------ Cypher ------------
+    23  CYPHER_UPSERT_PLACE = """
+    24  MERGE (p:Place {pleiadesId:$pleiadesId})
+    25  SET p.uri         = $uri,
+    26      p.title       = $title,
+    27      p.description = $description,
+    28      p.placeTypes  = $placeTypes,
+    29      p.subject     = $subject,
+    30      p.altNames    = $altNames,
+    31      p.languages   = $languages,
+    32      p.review_state= $review_state,
+    33      p.source      = 'Pleiades'
+    34  """
+    35  
+    36  CYPHER_UPSERT_STUB = """
+    37  MERGE (p:Place {pleiadesId:$pleiadesId})
+    38  ON CREATE SET p.uri = $uri, p.source = 'Pleiades'
+    39  """
+    40  
+    41  CYPHER_CONNECT = """
+    42  MATCH (a:Place {pleiadesId:$from}), (b:Place {pleiadesId:$to})
+    43  MERGE (a)-[r:CONNECTED]->(b)
+    44  ON CREATE SET r.connectionType = $connectionType,
+    45                r.title = $title,
+    46                r.associationCertainty = $associationCertainty,
+    47                r.uri = $uri,
+    48                r.source = 'Pleiades'
+    49  """
+    50  
+    51  # ------------ Helpers (streaming; handles @graph) ------------
+    52  def iter_pleiades_places(path: Path):
+    53      """Yield place dicts from .json/.json.gz/NDJSON without loading the whole file."""
+    54  
+    55      def _open_text():
+    56          return gzip.open(path, "rt", encoding="utf-8") if path.suffix.lower() == ".gz" else path.open("rt", encoding="utf-8")
+    57  
+    58      # Peek a little to guess the container type
+    59      f = _open_text()
+    60      head = f.read(200).lstrip()
+    61      f.close()
+    62  
+    63      # Case 1: top-level JSON array
+    64      if head.startswith("["):
+    65          f = _open_text()
+    66          try:
+    67              for place in ijson.items(f, "item"):
+    68                  if isinstance(place, dict):
+    69                      yield place
+    70          finally:
+    71              f.close()
+    72          return
+    73  
+    74      # Case 2: top-level JSON object (several variants)
+    75      if head.startswith("{"):
+    76          # 2a) JSON-LD with @graph: [...places...]
+    77          f = _open_text()
+    78          yielded = False
+    79          try:
+    80              for place in ijson.items(f, "@graph.item"):
+    81                  yielded = True
+    82                  if isinstance(place, dict):
+    83                      yield place
+    84          finally:
+    85              f.close()
+    86          if yielded:
+    87              return
+    88  
+    89          # 2b) {"places":[...]}
+    90          f = _open_text()
+    91          yielded = False
+    92          try:
+    93              for place in ijson.items(f, "places.item"):
+    94                  yielded = True
+    95                  if isinstance(place, dict):
+    96                      yield place
+    97          finally:
+    98              f.close()
+    99          if yielded:
+   100              return
+   101  
+   102          # 2c) GeoJSON FeatureCollection: {"features":[{"properties":{...}}, ...]}
+   103          f = _open_text()
+   104          yielded = False
+   105          try:
+   106              for feat in ijson.items(f, "features.item"):
+   107                  props = (feat or {}).get("properties")
+   108                  if isinstance(props, dict):
+   109                      yielded = True
+   110                      yield props
+   111          finally:
+   112              f.close()
+   113          if yielded:
+   114              return
+   115  
+   116          # 2d) dict-of-id -> place
+   117          f = _open_text()
+   118          yielded = False
+   119          try:
+   120              for key, place in ijson.kvitems(f, ""):
+   121                  if isinstance(place, dict):
+   122                      yielded = True
+   123                      yield place
+   124          finally:
+   125              f.close()
+   126          if yielded:
+   127              return
+   128  
+   129      # Case 3: NDJSON fallback (one JSON object per line)
+   130      f = _open_text()
+   131      try:
+   132          for line in f:
+   133              s = line.strip()
+   134              if not s or s[0] != "{":
+   135                  continue
+   136              try:
+   137                  obj = json.loads(s)
+   138              except json.JSONDecodeError:
+   139                  continue
+   140              if isinstance(obj, dict):
+   141                  yield obj
+   142      finally:
+   143          f.close()
+   144  
+   145  def _pid_from_uri(uri: str) -> Optional[str]:
+   146      if not isinstance(uri, str):
+   147          return None
+   148      m = re.search(r"/places/(\d+)", uri)
+   149      return m.group(1) if m else None
+   150  
+   151  def _collect_names(place: Dict[str, Any]) -> Tuple[List[str], List[str]]:
+   152      alt, langs = [], []
+   153      for n in place.get("names", []):
+   154          if not isinstance(n, dict):
+   155              continue
+   156          for k in ("attested", "romanized", "title", "name"):
+   157              v = n.get(k)
+   158              if isinstance(v, str) and v.strip():
+   159                  parts = [p.strip() for p in v.split(",") if p.strip()]
+   160                  alt.extend(parts)
+   161          lang = n.get("language")
+   162          if isinstance(lang, str) and lang not in langs:
+   163              langs.append(lang)
+   164      for k in ("label", "placename"):
+   165          v = place.get(k)
+   166          if isinstance(v, str) and v.strip():
+   167              alt.append(v.strip())
+   168      seen = set()
+   169      out = []
+   170      for a in alt:
+   171          if a not in seen:
+   172              seen.add(a); out.append(a)
+   173      return out, langs
+   174  
+   175  def _safe_list(x):
+   176      return x if isinstance(x, list) else []
+   177  
+   178  # ------------ Main ------------
+   179  def main():
+   180      if not NEO4J_PASS:
+   181          raise SystemExit("Set NEO4J_PASSWORD (or NEO4J_PASS) before running.")
+   182      src = Path(PLEIADES_JSON)
+   183      if not src.exists():
+   184          raise SystemExit(f"Not found: {src}")
+   185  
+   186      driver = GraphDatabase.driver(NEO4J_URI, auth=(NEO4J_USER, NEO4J_PASS))
+   187  
+   188      n_places, n_edges = 0, 0
+   189      with driver.session(database=NEO4J_DB) as sess:
+   190          for place in iter_pleiades_places(src):
+   191              # Identify the place
+   192              pid = str(place.get("id")) if place.get("id") is not None else _pid_from_uri(place.get("uri",""))
+   193              if not pid:
+   194                  continue
+   195  
+   196              uri   = place.get("uri") or f"https://pleiades.stoa.org/places/{pid}"
+   197              title = place.get("title") or place.get("name") or place.get("label")
+   198              desc  = place.get("description")
+   199              ptypes = _safe_list(place.get("placeTypes") or place.get("placeType") or place.get("place_type") or place.get("placeTypeURIs"))
+   200              subject = _safe_list(place.get("subject"))
+   201              review = place.get("review_state")
+   202              altNames, languages = _collect_names(place)
+   203  
+   204              sess.run(
+   205                  CYPHER_UPSERT_PLACE,
+   206                  pleiadesId=pid, uri=uri, title=title, description=desc,
+   207                  placeTypes=ptypes, subject=subject,
+   208                  altNames=altNames, languages=languages, review_state=review
+   209              )
+   210              n_places += 1
+   211  
+   212              # connectsWith: plain list of related URIs
+   213              for uri2 in _safe_list(place.get("connectsWith")):
+   214                  to_pid = _pid_from_uri(uri2)
+   215                  if not to_pid:
+   216                      continue
+   217                  sess.run(CYPHER_UPSERT_STUB, pleiadesId=to_pid, uri=uri2)
+   218                  sess.run(CYPHER_CONNECT,
+   219                           **{"from": pid, "to": to_pid},
+   220                           connectionType="related",
+   221                           title=None,
+   222                           associationCertainty=None,
+   223                           uri=None)
+   224                  n_edges += 1
+   225  
+   226              # connections: richer typed edges
+   227              for c in _safe_list(place.get("connections")):
+   228                  to_uri = c.get("connectsTo")
+   229                  to_pid = _pid_from_uri(to_uri) if to_uri else None
+   230                  if not to_pid:
+   231                      continue
+   232                  sess.run(CYPHER_UPSERT_STUB, pleiadesId=to_pid, uri=to_uri)
+   233                  sess.run(CYPHER_CONNECT,
+   234                           **{"from": pid, "to": to_pid},
+   235                           connectionType=c.get("connectionType"),
+   236                           title=c.get("title"),
+   237                           associationCertainty=c.get("associationCertainty"),
+   238                           uri=c.get("uri"))
+   239                  n_edges += 1
+   240  
+   241      driver.close()
+   242      print(f"Ingested places: {n_places}, connections: {n_edges}")
+   243  
+   244  if __name__ == "__main__":
+   245      main()
+   246  
+----- END .\ingest_pleiades.py -----
+
+----- BEGIN .\README.md -----
+     1  # GraphRag (prototype)
+     2  
+     3  - Ingests ISAW article chunks into Neo4j with embeddings.
+     4  - Secrets live in `.env` (see `.env.example`).
+     5  - Create DB `graphrag` in Neo4j 5.x, run constraints, then:
+     6  
+     7  Run:
+     8  
+     9      python ingest_one_article.py
+    10  
+----- END .\README.md -----
+
+----- BEGIN .\to_jsonl_fix_unicode.py -----
+     1  #!/usr/bin/env python3
+     2  # -*- coding: utf-8 -*-
+     3  """
+     4  Convert a JSON array of text chunks (isaw.txt) into JSONL,
+     5  decoding bare 'uXXXX' / 'uXXXXXX' codepoint strings into real Unicode.
+     6  
+     7  Usage:
+     8    python to_jsonl_fix_unicode.py isaw.txt isaw.jsonl --article-id isaw-papers-1-2011
+     9  """
+    10  
+    11  import argparse
+    12  import json
+    13  import re
+    14  import sys
+    15  import unicodedata
+    16  from pathlib import Path
+    17  
+    18  # matches: u2643, u00b0, u1f45, u03b1, etc. (4–6 hex digits)
+    19  UHEX = re.compile(r"u([0-9a-fA-F]{4,6})")
+    20  
+    21  
+    22  def decode_bare_u_sequences(s: str) -> str:
+    23      r"""
+    24      Robustly decode literal \uXXXX sequences in plain text.
+    25      - First collapse UTF-16 surrogate pairs to a single codepoint.
+    26      - Then decode single \uXXXX (exactly 4 hex digits).
+    27      - Anything invalid/out-of-range is left untouched.
+    28      """
+    29      # 1) Surrogate pairs: \uD800–\uDBFF followed by \uDC00–\uDFFF
+    30      def _pair_repl(m):
+    31          hi = int(m.group(1), 16)
+    32          lo = int(m.group(2), 16)
+    33          cp = 0x10000 + ((hi - 0xD800) << 10) + (lo - 0xDC00)
+    34          try:
+    35              return chr(cp)
+    36          except ValueError:
+    37              return m.group(0)
+    38  
+    39      s = re.sub(
+    40          r'\\u(d[89ab][0-9a-f]{2})\\u(d[cdef][0-9a-f]{2})',
+    41          lambda m: _pair_repl(m),
+    42          s,
+    43          flags=re.IGNORECASE
+    44      )
+    45  
+    46      # 2) Single \uXXXX (exactly 4 hex digits)
+    47      def _single_repl(m):
+    48          cp = int(m.group(1), 16)
+    49          # skip lone surrogates; they were handled above as pairs
+    50          if 0xD800 <= cp <= 0xDFFF or cp > 0x10FFFF:
+    51              return m.group(0)
+    52          try:
+    53              return chr(cp)
+    54          except ValueError:
+    55              return m.group(0)
+    56  
+    57      s = re.sub(
+    58          r'\\u([0-9a-f]{4})',
+    59          lambda m: _single_repl(m),
+    60          s,
+    61          flags=re.IGNORECASE
+    62      )
+    63  
+    64      return s
+    65  
+    66  
+    67  def normalize_text(s: str) -> str:
+    68      """Unicode NFC + replace NBSP with regular space."""
+    69      s = s.replace("\u00A0", " ")
+    70      return unicodedata.normalize("NFC", s)
+    71  
+    72  
+    73  def clean_text(s: str) -> str:
+    74      """Decode bare-u sequences then normalize."""
+    75      return normalize_text(decode_bare_u_sequences(s))
+    76  
+    77  
+    78  def load_chunks(input_path: Path) -> list[str]:
+    79      """Read a JSON array of strings from file."""
+    80      raw = input_path.read_text(encoding="utf-8-sig")
+    81      try:
+    82          data = json.loads(raw)
+    83      except json.JSONDecodeError as e:
+    84          msg = (
+    85              f"Failed to parse {input_path} as JSON.\n"
+    86              "Ensure the file is a valid JSON array of strings, e.g. [\"...\", \"...\"]\n"
+    87              f"JSON error: {e}"
+    88          )
+    89          raise SystemExit(msg)
+    90      if not isinstance(data, list) or not all(isinstance(x, str) for x in data):
+    91          raise SystemExit("Input must be a JSON array of strings.")
+    92      return data
+    93  
+    94  
+    95  def write_jsonl(chunks: list[str], output_path: Path, article_id: str):
+    96      """Write JSONL with cleaned text (no raw text kept)."""
+    97      with output_path.open("w", encoding="utf-8") as f:
+    98          for i, text_raw in enumerate(chunks):
+    99              text_clean = clean_text(text_raw)
+   100              obj = {
+   101                  "articleId": article_id,
+   102                  "chunkId": f"{article_id}:{i:04d}",
+   103                  "seq": i,
+   104                  "text": text_clean,
+   105              }
+   106              f.write(json.dumps(obj, ensure_ascii=False) + "\n")
+   107  
+   108  
+   109  def main():
+   110      parser = argparse.ArgumentParser()
+   111      parser.add_argument("input", type=Path, help="Path to isaw.txt (JSON array of strings)")
+   112      parser.add_argument("output", type=Path, nargs="?", help="Path to output JSONL (default: input stem + .jsonl)")
+   113      parser.add_argument("--article-id", default="isaw-article-1", help="Stable id/slug for this article")
+   114      args = parser.parse_args()
+   115  
+   116      input_path: Path = args.input
+   117      output_path: Path = args.output or input_path.with_suffix(".jsonl")
+   118  
+   119      chunks = load_chunks(input_path)
+   120      write_jsonl(chunks, output_path, args.article_id)
+   121  
+   122      # quick sanity check for residual 'uXXXX' patterns in cleaned text
+   123      residual = sum(1 for s in chunks if UHEX.search(clean_text(s)))
+   124      if residual:
+   125          print(f"WARNING: {residual} chunks still contain 'uXXXX' patterns after cleaning.", file=sys.stderr)
+   126  
+   127      print(f"Wrote {len(chunks)} lines to {output_path}")
+   128  
+   129  
+   130  if __name__ == "__main__":
+   131      main()
+   132  
+----- END .\to_jsonl_fix_unicode.py -----
+
+Wrote: audit_clean.txt

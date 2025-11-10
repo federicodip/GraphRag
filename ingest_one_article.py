@@ -43,8 +43,8 @@ from sentence_transformers import SentenceTransformer
 # Static file locations (adjust if needed)
 # -----------------------------
 CONFIG = {
-    "JSONL_PATH": r"C:\Users\feder\Desktop\GraphRag\data\chunks\isaw.jsonl",
-    "META_PATH":  r"C:\Users\feder\Desktop\GraphRag\data\articles\isaw-papers-1-2011.meta.json",
+    "JSONL_PATH": r"C:\Users\feder\Desktop\GraphRag\data\chunks\isaw2.jsonl",
+    "META_PATH":  r"C:\Users\feder\Desktop\GraphRag\data\articles\isaw-papers-2-2012.meta.json",
     "EMBED_MODEL": "sentence-transformers/all-MiniLM-L6-v2",
 }
 

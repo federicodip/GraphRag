@@ -26,3 +26,5 @@ Thumbs.db
 *.parquet
 *.feather
 .ipynb_checkpoints/
+
+data/pleiades/pleiades-places-latest.json.gz
