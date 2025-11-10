@@ -1,0 +1,28 @@
+﻿# Secrets
+.env
+.env.*
+*.key
+*.pem
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.build/
+dist/
+.venv/
+.pytest_cache/
+.cache/
+
+# Editors/OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Data/artifacts you likely don’t want in git (adjust as needed)
+*.db
+*.sqlite
+*.parquet
+*.feather
+.ipynb_checkpoints/
