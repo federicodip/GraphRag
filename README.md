@@ -1,6 +1,6 @@
 # GraphRAG-ISAW: Knowledge-Graph Extension for the AI Librarian
 
-A pragmatic, working extension to the IEEE paper project (“AI Librarian”) that adds a Neo4j knowledge graph on top of the RAG stack. It ingests ISAW Papers into Article/Chunk nodes, ingests Pleiades places into Place nodes, and links chunks to places with `MENTIONS` edges. Designed so you can bulk-ingest documents first, then iterate on linking without touching documents. Wikidata alignment is planned next.
+A working extension to the IEEE paper project (“AI Librarian”) that adds a Neo4j knowledge graph on top of the RAG stack. It ingests ISAW Papers into Article/Chunk nodes, ingests Pleiades places into Place nodes, and links chunks to places with `MENTIONS` edges. Designed so you can bulk-ingest documents first, then iterate on linking without touching documents. **Wikidata alignment is implemented via the Wikidata Query Service (SPARQL) using property P1584 (Pleiades ID).**
 
 ## Context: why these sources together
 
@@ -12,40 +12,46 @@ Wikidata is a general, CC0 knowledge base that cross-links to many authority fil
 
 Putting them together is sound because:
 
-* Your text (ISAW chunks) produces ambiguous surface forms.
-* Pleiades gives you the authoritative place entity backbone.
-* Wikidata extends those entities with broader graph context and cross-IDs for downstream linking.
+- Your text (ISAW chunks) produces ambiguous surface forms.
+- Pleiades gives you the authoritative place entity backbone.
+- Wikidata extends those entities with broader graph context and cross-IDs for downstream linking.
 
 ## What this is
 
 A graph-augmented RAG pipeline:
 
-* Your existing vector/RAG system (“AI Librarian”).
-* A Neo4j knowledge graph that models Articles, Chunks, People, Concepts, and Places from Pleiades.
-* A deterministic linker that connects `Chunk → Place` via surface forms (title + `altNames`) using full-text shortlist + regex boundaries.
+- Your existing vector/RAG system (“AI Librarian”).
+- A Neo4j knowledge graph that models Articles, Chunks, People, Concepts, and Places from Pleiades.
+- A deterministic linker that connects `Chunk → Place` via surface forms (title + `altNames`) using full-text shortlist + regex boundaries.
 
 **Goal:** Add entity-level structure and repeatable linking over the same corpus used by the RAG backend, so you can explore, audit, and enrich relationships that matter to Ancient World research.
 
+## Wikidata enrichment: how it works
+
+A small Python job (`wd_enrich_places.py`) batches all `Place.pleiadesId` values and queries the Wikidata Query Service (WDQS) with SPARQL. For each hit where `?item wdt:P1584 ?pleiadesId`, we:
+
+- `MERGE` a `(:WikidataEntity {qid})` and set `uri`, `label`, optional `instanceOf` (P31), and `lat`/`lon` from P625.
+- `MERGE (p:Place {pleiadesId})-[:SAME_AS {property:'P1584', source:'wikidata', matchedBy:'pleiadesId'}]->(w:WikidataEntity)`.
+
+It’s idempotent and safe to re-run. Batching and polite delays are included to respect WDQS rate limits.
+
 ## Data sources
 
-* **ISAW Papers (articles & chunks)** → `:Article`, `:Chunk`
-* **Pleiades (gazetteer of ancient places)** → `:Place` (with `pleiadesId`, `title`, `altNames`, etc.)
-* **Wikidata (planned)** → alignment via `pleiadesId` property mapping to Q identifiers, adding cross-links later
+- **ISAW Papers (articles & chunks)** → `:Article`, `:Chunk`
+- **Pleiades (gazetteer of ancient places)** → `:Place` (with `pleiadesId`, `title`, `altNames`, etc.)
+- **Wikidata (live enrichment)** → `:WikidataEntity` nodes created by resolving `Place.pleiadesId` through P1584; we add `[:SAME_AS {property:'P1584', source:'wikidata', matchedBy:'pleiadesId'}]` from `Place → WikidataEntity` and optionally store `label`, `instanceOf` (P31), and coordinates (P625 → `lat`,`lon`).
 
 ## Current graph content (as loaded)
 
-* **Nodes:** 42,577
+- **Nodes:** 42,577
+- **Labels used:** `Article`, `Chunk`, `Concept`, `Person`, `Place`
+- **Relationships:** 32,057
+- **Types used:** `AUTHORED`, `CONNECTED`, `HAS_CHUNK`, `MENTIONS`, `NEXT`, `PART_OF`
 
-* **Labels used:** `Article`, `Chunk`, `Concept`, `Person`, `Place`
+> After running the Wikidata job you will also see `WikidataEntity` nodes and `SAME_AS` relationships. Counts will depend on how many batches you’ve completed.
 
-* **Relationships:** 32,057
-
-* **Types used:** `AUTHORED`, `CONNECTED`, `HAS_CHUNK`, `MENTIONS`, `NEXT`, `PART_OF`
-
-**Property keys (seen in use):**
+**Property keys (seen in use):**  
 `aliases`, `altNames`, `articleId`, `associationCertainty`, `by`, `chunkId`, `connectionType`, `corresponding`, `data`, `description`, `id`, `journal`, `languages`, `matched`, `name`, `nodes`, `order`, `placeTypes`, `pleiadesId`, `relationships`, `review_state`, `role`, `seq`, `source`, `style`, `subject`, `text`, `textEmbedding`, `title`, `uri`, `url`, `visualisation`, `year`
-
-Replace that line with this block:
 
 ---
 
@@ -57,61 +63,55 @@ Replace that line with this block:
 
 **Place** — 42,139 nodes
 
-* **Required:**
-
-  * `pleiadesId` (string)
-  * `uri` (string, Pleiades place URL)
-  * `source` (string, e.g., `"Pleiades"`)
-* **Optional:**
-
-  * `title` (string) — present on ~41,777
-  * `altNames` (list<string>) — ~41,777
-  * `description` (string) — ~41,777
-  * `placeTypes` (list<string>) — ~41,777
-  * `subject` (list<string>) — ~41,777
-  * `languages` (list<string>) — ~41,777
-  * `review_state` (string) — ~41,777
+- **Required:**
+  - `pleiadesId` (string)
+  - `uri` (string, Pleiades place URL)
+  - `source` (string, e.g., `"Pleiades"`)
+- **Optional:**
+  - `title` (string) — present on ~41,777
+  - `altNames` (list<string>) — ~41,777
+  - `description` (string) — ~41,777
+  - `placeTypes` (list<string>) — ~41,777
+  - `subject` (list<string>) — ~41,777
+  - `languages` (list<string>) — ~41,777
+  - `review_state` (string) — ~41,777
 
 **Article** — 2 nodes
 
-* **Required:**
-
-  * `articleId` (string)
-  * `title` (string)
-  * `year` (int)
-  * `journal` (string)
-  * `url` (string)
+- **Required:**
+  - `articleId` (string)
+  - `title` (string)
+  - `year` (int)
+  - `journal` (string)
+  - `url` (string)
 
 **Chunk** — 218 nodes
 
-* **Required:**
-
-  * `chunkId` (string)
-  * `seq` (int)
-  * `text` (string)
-  * `textEmbedding` (list<float>)
+- **Required:**
+  - `chunkId` (string)
+  - `seq` (int)
+  - `text` (string)
+  - `textEmbedding` (list<float>)
 
 **Person** — 213 nodes
 
-* **Required:**
-
-  * `name` (string)
-  * `aliases` (list<string>)
+- **Required:**
+  - `name` (string)
+  - `aliases` (list<string>)
 
 **Concept** — 5 nodes
 
-* **Required:**
-
-  * `name` (string)
-
+- **Required:**
+  - `name` (string)
 
 ## Tech stack
 
-* Neo4j 5.x / 4.x
-* Neo4j Driver for Python
-* APOC optional (linker provided without APOC)
-* Python 3.10+ for ingestion & linking scripts
-* Vector/RAG: your AI Librarian stack (OpenAI embeddings + Chroma, LangChain RetrievalQA, GPT-4) remains unchanged
+- Neo4j 5.x / 4.x
+- Neo4j Driver for Python
+- APOC optional (linker provided without APOC)
+- Python 3.10+ for ingestion & linking scripts
+- Requests + python-dotenv (for WDQS job)
+- Vector/RAG: your AI Librarian stack (OpenAI embeddings + Chroma, LangChain RetrievalQA, GPT-4) remains unchanged
 
 ## Repository layout (suggested)
 
@@ -128,7 +128,8 @@ Replace that line with this block:
 │  ├─ linker_places.py        # Chunk -> Place MENTIONS creation
 │  └─ sanity.cypher           # verification queries
 ├─ tools/
-│  └─ to_jsonl_fix_unicode.py # robust JSONL converter for article chunks
+│  ├─ to_jsonl_fix_unicode.py # robust JSONL converter for article chunks
+│  └─ wd_enrich_places.py     # Wikidata enrichment job (P1584 → SAME_AS)
 └─ README.md
 ```
 
@@ -145,6 +146,9 @@ FOR (c:Chunk) REQUIRE c.chunkId IS UNIQUE;
 
 CREATE CONSTRAINT place_pid IF NOT EXISTS
 FOR (p:Place) REQUIRE p.pleiadesId IS UNIQUE;
+
+CREATE CONSTRAINT wd_qid IF NOT EXISTS
+FOR (w:WikidataEntity) REQUIRE w.qid IS UNIQUE;
 ```
 
 ### Full-text index for candidate retrieval (once)
@@ -162,10 +166,7 @@ CALL db.index.fulltext.createNodeIndex(
 Input is a JSON array of strings (each string = a chunk). The converter normalizes Unicode and writes JSONL with `articleId`, `chunkId`, `seq`, `text`.
 
 ```bash
-python tools/to_jsonl_fix_unicode.py \
-  data/chunks/isaw2.txt \
-  data/chunks/isaw2.jsonl \
-  --article-id isaw-papers-2-2012
+python tools/to_jsonl_fix_unicode.py   data/chunks/isaw2.txt   data/chunks/isaw2.jsonl   --article-id isaw-papers-2-2012
 ```
 
 ### Ingest Articles & Chunks
@@ -176,9 +177,9 @@ Upsert both and wire `HAS_CHUNK` & `NEXT`. Your script may already do this; keep
 
 Upsert `:Place` with at least:
 
-* `pleiadesId`
-* `title`
-* `altNames` (array)
+- `pleiadesId`
+- `title`
+- `altNames` (array)
 
 Keep other Pleiades fields if available.
 
@@ -186,11 +187,20 @@ Keep other Pleiades fields if available.
 
 The provided `linker_places.py` does:
 
-1. Full-text shortlist on `Chunk.text`
-2. Boundary regex on matched name
-3. `MERGE (c)-[:MENTIONS {matched, source:'fulltext+regex'}]->(p)`
+- Full-text shortlist on `Chunk.text`
+- Boundary regex on matched name
+- `MERGE (c)-[:MENTIONS {matched, source:'fulltext+regex'}]->(p)`
 
 It is idempotent and safe to re-run after tuning.
+
+### Run Wikidata enrichment
+
+Resolve Place → Wikidata via P1584 and add `SAME_AS`:
+
+```bash
+# Make sure NEO4J_URI / NEO4J_USER / NEO4J_PASSWORD (and NEO4J_DATABASE if non-default) are set
+python tools/wd_enrich_places.py
+```
 
 ## Linker (minimal working version)
 
@@ -260,6 +270,9 @@ MATCH (a:Article) RETURN count(a) AS articles;
 MATCH (c:Chunk)   RETURN count(c) AS chunks;
 MATCH (p:Place)   RETURN count(p) AS places;
 MATCH ()-[r:MENTIONS]->(:Place) RETURN count(r) AS mentions;
+
+MATCH (w:WikidataEntity) RETURN count(w) AS wd_items;
+MATCH (:Place)-[r:SAME_AS {property:'P1584'}]->(:WikidataEntity) RETURN count(r) AS same_as_p1584;
 ```
 
 ### Coverage per article
@@ -270,7 +283,7 @@ OPTIONAL MATCH (c)-[m:MENTIONS]->(p:Place)
 RETURN a.articleId,
        count(DISTINCT c) AS chunks,
        count(DISTINCT p) AS places,
-       count(m)          AS links
+       count(DISTINCT m) AS links
 ORDER BY links DESC
 LIMIT 50;
 ```
@@ -284,40 +297,41 @@ ORDER BY c.chunkId, p.title
 LIMIT 100;
 ```
 
+Check Wikidata joins for a sample place:
+
+```cypher
+MATCH (p:Place {pleiadesId:$pid})-[:SAME_AS {property:'P1584'}]->(w:WikidataEntity)
+RETURN p.pleiadesId, p.title, w.qid, w.label, w.instanceOf, w.lat, w.lon;
+```
+
 ## How this interacts with the RAG app
 
 The RAG app continues to use vector search over chunk text to ground answers with citations.
 
 The graph adds:
 
-* Explicit `MENTIONS` (`Chunk → Place`) you can facet or filter by.
-* Navigation across `Article` / `Chunk` / `Place` / `Person` / `Concept` via Cypher.
-* A stable substrate to experiment with entity resolution and cross-corpus links (e.g., DCAA / AWDL later).
+- Explicit `MENTIONS` (`Chunk → Place`) you can facet or filter by.
+- Navigation across `Article / Chunk / Place / Person / Concept` via Cypher.
+- A stable substrate to experiment with entity resolution and cross-corpus links (e.g., DCAA / AWDL later).
+- Wikidata-backed enrichment for `Place` via `SAME_AS`, enabling cross-IDs and additional metadata (type, coords).
 
 You can expose graph-powered filters in your UI (for example: “restrict to chunks mentioning Babylon”).
 
 ## Roadmap
 
-* **Wikidata alignment:** resolve `Place → Wikidata` via `pleiadesId` mappings; add `:SAME_AS` edges and enrich with external identifiers.
-* **Disambiguation:** optional context cues (e.g., `Mesopotamia | Euphrates | Assyria` nearby) for high-ambiguity names.
-* **Accent-folding & fuzzy:** accent-insensitive matching and cautious fuzzy matching for long names (≥ 6–7 chars).
-* **People/Concept linkers:** parallel pipelines for `Person` and `Concept`.
-
-## Troubleshooting
-
-* **No chunks for an article:** verify the JSON input is a JSON array of strings (not JSONL) before conversion. Run the converter; then ingest the produced JSONL.
-* **Zero matches:** make sure the full-text index exists and is named `chunkText`; run the linker after all articles are ingested. Check that `Place.altNames` is an array of strings and names are ≥ 3 chars.
-* **Windows Unicode glitches:** always read with `utf-8-sig` and escape backslashes in regex building (the supplied converter already handles surrogate pairs and malformed `\uXXXX`).
+- Extend Wikidata enrichment: beyond places (P1584), add person and concept alignment (e.g., VIAF/ORCID/ULAN, topical items), and pull selected statements (e.g., P625, P279, P131, P17) for analysis.
+- Disambiguation: optional context cues (e.g., Mesopotamia | Euphrates | Assyria nearby) for high-ambiguity names.
+- Accent-folding & fuzzy: accent-insensitive matching and cautious fuzzy matching for long names (≥ 6–7 chars).
+- People/Concept linkers: parallel pipelines for `Person` and `Concept`.
 
 ## Provenance and licensing
 
-* **ISAW Papers:** open access, CC-BY (site-hosted).
-* **Pleiades:** open, with clear attribution requirements; keep `pleiadesId` and source `uri` in your nodes.
-* **Wikidata (future enrichment):** CC0; store QIDs and source edges.
+- **ISAW Papers:** open access, CC-BY (site-hosted).
+- **Pleiades:** open, with clear attribution requirements; keep `pleiadesId` and source `uri` in your nodes.
+- **Wikidata:** CC0; store QIDs and source edges.
 
 ## Contributing
 
-* Keep `MERGE`-idempotent Cypher; don’t introduce write patterns that duplicate nodes.
-* Treat linkers as pure functions over existing nodes: re-runnable, measurable, and auditable.
-* Add sanity queries for every new entity type and every new linker.
-
+- Keep `MERGE`-idempotent Cypher; don’t introduce write patterns that duplicate nodes.
+- Treat linkers as pure functions over existing nodes: re-runnable, measurable, and auditable.
+- Add sanity queries for every new entity type and every new linker.
