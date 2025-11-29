@@ -1,11 +1,21 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3 
 # -*- coding: utf-8 -*-
 """
 Convert a JSON array of text chunks (isaw.txt) into JSONL,
 decoding bare 'uXXXX' / 'uXXXXXX' codepoint strings into real Unicode.
 
-Usage:
-  python to_jsonl_fix_unicode.py isaw.txt isaw.jsonl --article-id isaw-papers-1-2011
+Single-file usage (backwards compatible):
+  python to_jsonl_fix_unicode.py input.txt output.jsonl --article-id isaw-papers-1-2011
+
+Batch mode (new):
+  python to_jsonl_fix_unicode.py --batch-dir PATH/TO/TXT/DIR --article-id-from-stem
+
+In batch mode:
+  - Processes all files matching --pattern (default: *.txt) in --batch-dir.
+  - Writes <stem>.jsonl in the same directory (or in --output-dir, if given).
+  - articleId is either:
+      * the same for all files (if you set --article-id), OR
+      * the filename stem (if you set --article-id-from-stem).
 """
 
 import argparse
@@ -106,25 +116,111 @@ def write_jsonl(chunks: list[str], output_path: Path, article_id: str):
             f.write(json.dumps(obj, ensure_ascii=False) + "\n")
 
 
-def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("input", type=Path, help="Path to isaw.txt (JSON array of strings)")
-    parser.add_argument("output", type=Path, nargs="?", help="Path to output JSONL (default: input stem + .jsonl)")
-    parser.add_argument("--article-id", default="isaw-article-1", help="Stable id/slug for this article")
-    args = parser.parse_args()
-
-    input_path: Path = args.input
-    output_path: Path = args.output or input_path.with_suffix(".jsonl")
-
+def process_one(input_path: Path, output_path: Path, article_id: str):
     chunks = load_chunks(input_path)
-    write_jsonl(chunks, output_path, args.article_id)
+    write_jsonl(chunks, output_path, article_id)
 
     # quick sanity check for residual 'uXXXX' patterns in cleaned text
     residual = sum(1 for s in chunks if UHEX.search(clean_text(s)))
     if residual:
-        print(f"WARNING: {residual} chunks still contain 'uXXXX' patterns after cleaning.", file=sys.stderr)
+        print(
+            f"WARNING: {residual} chunks in {input_path.name} still contain 'uXXXX' patterns after cleaning.",
+            file=sys.stderr,
+        )
 
-    print(f"Wrote {len(chunks)} lines to {output_path}")
+    print(f"Wrote {len(chunks)} lines to {output_path} (articleId={article_id})")
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    # Single-file mode (backwards compatible)
+    parser.add_argument(
+        "input",
+        type=Path,
+        nargs="?",
+        help="Path to isaw.txt (JSON array of strings) [single-file mode]",
+    )
+    parser.add_argument(
+        "output",
+        type=Path,
+        nargs="?",
+        help="Path to output JSONL (default: input stem + .jsonl) [single-file mode]",
+    )
+
+    # Batch mode
+    parser.add_argument(
+        "--batch-dir",
+        type=Path,
+        help="Process all input files in this directory (batch mode).",
+    )
+    parser.add_argument(
+        "--pattern",
+        default="*.txt",
+        help="Glob pattern within --batch-dir for input files (default: *.txt).",
+    )
+    parser.add_argument(
+        "--output-dir",
+        type=Path,
+        help="Optional output directory for JSONL files (default: same as input).",
+    )
+    parser.add_argument(
+        "--article-id",
+        default=None,
+        help="Stable id/slug for this article (single-file) "
+             "or for ALL files in batch mode (unless --article-id-from-stem is set).",
+    )
+    parser.add_argument(
+        "--article-id-from-stem",
+        action="store_true",
+        help="In batch mode, use the filename stem as articleId.",
+    )
+
+    args = parser.parse_args()
+
+    # Batch mode takes precedence if --batch-dir is provided
+    if args.batch_dir:
+        in_dir: Path = args.batch_dir.expanduser().resolve()
+        if not in_dir.exists():
+            raise SystemExit(f"--batch-dir does not exist: {in_dir}")
+
+        out_dir: Path | None = args.output_dir.expanduser().resolve() if args.output_dir else None
+        files = sorted(in_dir.glob(args.pattern))
+        if not files:
+            raise SystemExit(f"No files matching pattern '{args.pattern}' in {in_dir}")
+
+        print(f"Batch mode: {len(files)} file(s) in {in_dir} matching {args.pattern}")
+
+        for input_path in files:
+            if args.article_id_from_stem:
+                article_id = input_path.stem
+            elif args.article_id:
+                article_id = args.article_id
+            else:
+                # default fallback: also use stem
+                article_id = input_path.stem
+
+            if out_dir:
+                out_dir.mkdir(parents=True, exist_ok=True)
+                output_path = out_dir / (input_path.stem + ".jsonl")
+            else:
+                output_path = input_path.with_suffix(".jsonl")
+
+            process_one(input_path, output_path, article_id)
+
+        return
+
+    # Single-file mode (old behavior)
+    if not args.input:
+        parser.error("You must either specify an input file or use --batch-dir.")
+
+    input_path: Path = args.input.expanduser().resolve()
+    output_path: Path = (args.output or input_path.with_suffix(".jsonl")).expanduser().resolve()
+    article_id = args.article_id or "isaw-article-1"
+
+    if not input_path.exists():
+        raise SystemExit(f"Input file not found: {input_path}")
+
+    process_one(input_path, output_path, article_id)
 
 
 if __name__ == "__main__":
