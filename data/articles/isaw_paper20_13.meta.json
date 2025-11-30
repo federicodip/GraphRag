@@ -1,8 +1,8 @@
 {
   "articleId": "isaw_paper20_13",
-  "title": "",
-  "year": null,
+  "title": "Applied Use of JSON, GeoJSON, JSON-LD, SPARQL, and IPython Notebooks for Representing and Interacting with Small Datasets",
+  "year": 2021,
   "journal": "ISAW Papers",
-  "url": "",
-  "authors": []
+  "url": "https://dlib.nyu.edu/awdl/isaw/isaw-papers/20-13/",
+  "authors": ["Sebastian Heath"]
 }
