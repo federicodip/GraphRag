@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import re
 import os
 import json
 import re
@@ -45,6 +46,18 @@ BATCH_SIZE = 206   # set to 10 / 50 / whatever
 # ============================================================
 # LOAD CHUNKS AND BUILD / LOAD VECTORSTORE (Chroma)
 # ============================================================
+
+def extract_quoted_title(question: str) -> str | None:
+    """
+    If the question contains a double-quoted phrase, return it.
+    Example: '... article "Current Practice in Linked Open Data for the Ancient World"?'
+    → 'Current Practice in Linked Open Data for the Ancient World'
+    """
+    m = re.search(r'"([^"]+)"', question)
+    if m:
+        return m.group(1).strip()
+    return None
+
 
 def extract_source(chunk: str) -> str:
     marker = "Source: "
@@ -155,29 +168,85 @@ cypher_prompt = PromptTemplate(
 
 cypher_llm = ChatOpenAI(model_name="gpt-4", temperature=0)
 
+def clean_cypher(cypher: str) -> str:
+    """
+    Remove comment / junk lines from LLM-generated Cypher.
+    - Drops empty lines.
+    - Drops lines starting with '#'.
+    """
+    lines = []
+    for line in cypher.splitlines():
+        s = line.strip()
+        if not s:
+            continue
+        if s.startswith("#"):
+            continue
+        lines.append(line)
+    return "\n".join(lines)
+
 
 def generate_cypher(question: str) -> str:
     return cypher_llm.invoke(
         cypher_prompt.format(schema=kg.schema, question=question)
     ).content.strip()
 
-
 def get_graph_context(question: str, max_chunks: int = 10) -> str:
+    """Generate Cypher, clean it, run it; if nothing comes back, fall back to article-title lookup."""
+    rows = []
+
+    # 1) Try LLM-generated Cypher
     try:
-        cypher = generate_cypher(question)
+        raw_cypher = generate_cypher(question)
+        cypher = clean_cypher(raw_cypher)
+
         print("\n[Cypher generated]")
         print(cypher)
+
         rows = kg.query(cypher)
     except Exception as e:
         print(f"[Graph error] {e}")
-        return ""
+        rows = []
 
+    # 2) Fallback: if nothing returned AND question has quoted article title, query directly by title
+    if not rows:
+        title = extract_quoted_title(question)
+        if title:
+            print(f"[Fallback: querying by article title {title!r}]")
+            try:
+                rows = kg.query(
+                    """
+                    MATCH (a:Article)
+                    WHERE a.title CONTAINS $title
+                    MATCH (a)-[:HAS_CHUNK]->(c:Chunk)
+                    RETURN a.title AS article_title, c.text AS text_chunk
+                    LIMIT 20
+                    """,
+                    {"title": title},
+                )
+            except Exception as e:
+                print(f"[Fallback graph error] {e}")
+                rows = []
+
+    # 3) Build context string
     texts = []
     for row in rows[:max_chunks]:
         if isinstance(row, dict):
-            t = row.get("text_chunk")
-            if isinstance(t, str) and t.strip():
-                texts.append(t.strip())
+            # Support both our fallback shape and whatever the LLM produced
+            chunk = (
+                row.get("text_chunk")
+                or row.get("c.text")
+                or row.get("text")
+            )
+            article_title = (
+                row.get("article_title")
+                or row.get("a.title")
+            )
+
+            if isinstance(chunk, str) and chunk.strip():
+                if isinstance(article_title, str) and article_title.strip():
+                    texts.append(f"[{article_title.strip()}]\n{chunk.strip()}")
+                else:
+                    texts.append(chunk.strip())
         else:
             texts.append(str(row))
 
