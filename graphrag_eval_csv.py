@@ -242,8 +242,6 @@ def get_graph_context(question: str, max_chunks: int = 10) -> str:
             print("\n[Cypher generated]")
             print(cypher)
 
-rows = kg.query(cypher)
-
             rows = kg.query(cypher)
         except Exception as e:
             print(f"[Graph error] {e}")
